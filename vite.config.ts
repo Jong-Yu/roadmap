@@ -5,6 +5,13 @@ import dts from 'vite-plugin-dts';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "./src/lib/default.scss"`,
+      },
+    },
+  },
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/lib/index.ts'),
