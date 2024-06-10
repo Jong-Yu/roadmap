@@ -8,17 +8,14 @@ import {
   EventOption,
   DisplayOption,
   StylingOption,
+  Column,
 } from '../types/public-types';
 import { GridProps } from '../containers/Grid/Grid';
 import { ganttDateRange, seedDates } from '../helpers/date-helper';
 import { CalendarProps } from '../containers/Calendar/Calendar';
 import { RoadMapTaskContentProps } from './components/RoadMapTaskContent';
-import {
-  TaskListHeader
-} from '../containers/TaskList/components/TaskListHeader';
-import {
-  TaskListTable
-} from '../containers/TaskList/components/TaskListTable';
+import { TaskListHeader } from '../containers/TaskList/components/TaskListHeader';
+import { TaskListTable } from '../containers/TaskList/components/TaskListTable';
 import { Tooltip } from '../components/Tooltip';
 import { TooltipContent } from '../components/Tooltip/TooltipContent';
 import { VerticalScroll } from '../components/VerticalScroll';
@@ -37,6 +34,7 @@ export type RoadMapProps = Partial<EventOption> &
   Partial<DisplayOption> &
   Partial<StylingOption> & {
     tasks: Task[];
+    columns?: Column[];
     bodyStyle?: React.CSSProperties;
   };
 
@@ -55,12 +53,12 @@ export const defaultRoadMapProps: TOptionalProps = {
   },
   // event options
   timeStep: 300000,
-  onDateChange: () => { },
-  onProgressChange: () => { },
-  onDoubleClick: () => { },
-  onDelete: () => { },
-  onSelect: () => { },
-  onExpanderClick: () => { },
+  onDateChange: () => {},
+  onProgressChange: () => {},
+  onDoubleClick: () => {},
+  onDelete: () => {},
+  onSelect: () => {},
+  onExpanderClick: () => {},
   // display options
   viewMode: ViewMode.Day,
   locale: 'ko-KR',
@@ -75,6 +73,7 @@ export const defaultRoadMapProps: TOptionalProps = {
   barCornerRadius: 3,
   handleWidth: 8,
   todayColor: 'rgba(252, 248, 227, 0.5)',
+  columns: [{ id: 'name', name: 'Name', width: 180 }],
   TooltipContent: TooltipContent,
 };
 
@@ -83,6 +82,7 @@ export const RoadMap = (props: RoadMapProps & typeof defaultRoadMapProps) => {
   const {
     // general
     tasks: propsTasks,
+    columns,
     bodyStyle,
     // event options
     timeStep,
@@ -137,7 +137,7 @@ export const RoadMap = (props: RoadMapProps & typeof defaultRoadMapProps) => {
   const ganttFullHeight = barTasks.length * rowHeight;
 
   // *** USE EFFECT ***
-  useEffect(() => setTasks(propsTasks), [propsTasks])
+  useEffect(() => setTasks(propsTasks), [propsTasks]);
 
   useEffect(() => {
     const filteredTasks: Task[] = onExpanderClick!!
@@ -165,7 +165,7 @@ export const RoadMap = (props: RoadMapProps & typeof defaultRoadMapProps) => {
         taskHeight,
         barCornerRadius,
         handleWidth,
-        rtl
+        rtl,
       }),
     );
   }, [
@@ -199,8 +199,7 @@ export const RoadMap = (props: RoadMapProps & typeof defaultRoadMapProps) => {
         if (
           prevStateTask &&
           (prevStateTask.start.getTime() !== changedTask.start.getTime() ||
-            prevStateTask.end.getTime() !== changedTask.end.getTime() ||
-            prevStateTask.progress !== changedTask.progress)
+            prevStateTask.end.getTime() !== changedTask.end.getTime())
         ) {
           // actions for change
           const newTaskList = barTasks.map((t) =>
@@ -380,10 +379,11 @@ export const RoadMap = (props: RoadMapProps & typeof defaultRoadMapProps) => {
     TaskListTable: TaskListTable,
     // components props
     taskListHeaderProps: {
-      columns: ["Name"]
+      columns,
     },
     taskListTableProps: {
       tasks: barTasks,
+      columns,
       onExpanderClick: handleExpanderClick,
     },
     // styles

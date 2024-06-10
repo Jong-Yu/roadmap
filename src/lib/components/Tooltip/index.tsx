@@ -73,11 +73,7 @@ export const Tooltip = ({
         const fullChartWidth = taskListWidth + svgContainerWidth;
 
         if (tooltipLeftmostPoint > fullChartWidth) {
-          newRelatedX =
-            task.x1 +
-            taskListWidth -
-            scrollX -
-            tooltipWidth;
+          newRelatedX = task.x1 + taskListWidth - scrollX - tooltipWidth;
         }
 
         if (newRelatedX < taskListWidth) {
@@ -93,7 +89,7 @@ export const Tooltip = ({
       }
 
       setRelatedY(newRelatedY);
-      setRelatedX(newRelatedX);
+      setRelatedX(newRelatedX + 50);
     }
   }, [
     task,

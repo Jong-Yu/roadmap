@@ -1,16 +1,14 @@
 // *** NPM ***
 import React, { useEffect, useRef } from 'react';
 
-import {
-  TaskListTable,
-  TaskListTableProps,
-} from './components/TaskListTable';
+import { TaskListTable, TaskListTableProps } from './components/TaskListTable';
 import {
   TaskListHeader,
   TaskListHeaderProps,
 } from './components/TaskListHeader';
 
-import './TaskList.scss'
+import './TaskList.scss';
+import { Column } from '../../types';
 
 // *** TYPES ***
 export type TaskListProps = {
@@ -58,7 +56,11 @@ const TaskList = (props: TaskListProps) => {
       {/* HEADER */}
       <TaskListHeader {...taskListHeaderProps} />
 
-      <div className="tasklist_wrapper" style={taskListTableWrapperStyles} ref={horizontalContainerRef}>
+      <div
+        className="tasklist_wrapper"
+        style={taskListTableWrapperStyles}
+        ref={horizontalContainerRef}
+      >
         {/* TABLE */}
         <TaskListTable {...taskListTableProps} />
       </div>

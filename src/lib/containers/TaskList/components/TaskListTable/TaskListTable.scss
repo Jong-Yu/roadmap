@@ -1,42 +1,41 @@
 @import '../../../../default.scss';
 
 .tasklist__table-root {
-    display: table;
-    border-Bottom: #e6e4e4 1px solid;
-    border-Left: #e6e4e4 1px solid;
+  display: table;
+  border-bottom: #e6e4e4 1px solid;
+  border-left: #e6e4e4 1px solid;
 }
 
 .tasklist__table-row {
-    display: table-row;
-    text-Overflow: ellipsis;
-    height: 50px;
+  display: table-row;
+  text-overflow: ellipsis;
+  height: 50px;
 }
 
 .tasklist__table-cell {
-    display: table-cell;
-    vertical-Align: middle;
-    white-Space: nowrap;
-    overflow: hidden;
-    text-Overflow: ellipsis;
-    min-width: 150px;
-    max-width: 150px;
+  display: table-cell;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 150px;
 }
 
 .tasklist__table-cell__wrapper {
-    display: flex;
-    overflow: 'hidden',
+  display: flex;
+  overflow: 'hidden';
 }
 
 .tasklist__table-expander {
-    color: rgb(86 86 86);
-    font-Size: 0.6rem;
-    padding: 0.15rem 0.2rem 0rem 0.2rem;
-    user-Select: none;
-    cursor: pointer;
+  color: rgb(86 86 86);
+  font-size: 0.6rem;
+  padding: 0.15rem 0.2rem 0rem 0.2rem;
+  user-select: none;
+  cursor: pointer;
 }
 
 .tasklist__table-expander__empty {
-    font-Size: 0.6rem;
-    padding-Left: 1rem;
-    user-Select: none;
+  font-size: 0.6rem;
+  padding-left: 1rem;
+  user-select: none;
 }

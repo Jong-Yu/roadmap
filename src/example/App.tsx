@@ -80,6 +80,17 @@ const App = () => {
       <RoadMap
         {...defaultRoadMapProps}
         tasks={tasks}
+        columns={[
+          { id: 'name', name: 'Task Name', width: 180 },
+          { id: 'start', name: 'Start Date', width: 400 },
+          { id: 'end', name: 'End Date', width: 400 },
+          {
+            id: 'schedule',
+            name: 'schedule',
+            width: 100,
+            cell: (task: Task) => <a href="naver.com">{task.id}</a>,
+          },
+        ]}
         viewMode={view}
         // handlers
         onDateChange={handleTaskChange}
