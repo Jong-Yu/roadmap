@@ -1,8 +1,9 @@
 import { ReactNode } from 'react';
-import { Task } from '../../../../types/public-types';
+import { Column, Task } from '../../../../types/public-types';
 
 export interface TaskListTableProps {
     tasks: Task[];
+    columns: Column[];
     expanderSymbolOpen?: ReactNode;
     expanderSymbolClose?: ReactNode;
     expanderSymbolEmpty?: ReactNode;

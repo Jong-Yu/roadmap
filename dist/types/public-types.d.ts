@@ -1,4 +1,6 @@
-/// <reference types="react" />
+import { ReactNode } from 'react';
+import { BarTask } from './bar-task';
+
 export declare enum ViewMode {
     QuarterDay = "Quarter Day",
     HalfDay = "Half Day",
@@ -8,7 +10,11 @@ export declare enum ViewMode {
     Month = "Month"
 }
 export type TaskType = 'task' | 'project';
+export type styles = {
+    backgroundColor?: string;
+};
 export interface Task {
+    [key: string]: string | number | Date | boolean | undefined | styles | BarTask[];
     /**
      * By default all tasks shown by list index sequentially
      * So if you are going to use some other order or output multiple bars per row
@@ -20,13 +26,8 @@ export interface Task {
     name: string;
     start: Date;
     end: Date;
-    /**
-     * From 0 to 100
-     */
-    progress: number;
     styles?: {
         backgroundColor?: string;
-        backgroundSelectedColor?: string;
     };
     isDisabled?: boolean;
     project?: string;
@@ -80,4 +81,10 @@ export interface StylingOption {
     TooltipContent?: React.FC<{
         task: Task;
     }>;
+}
+export interface Column {
+    id: string;
+    name: string;
+    width?: number;
+    cell?: (task: Task) => ReactNode;
 }

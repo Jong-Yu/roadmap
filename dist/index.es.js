@@ -1,5 +1,5 @@
-import rt, { useRef as le, useEffect as z, useState as V } from "react";
-var et = { exports: {} }, Oe = {};
+import rt, { useRef as le, useEffect as X, useState as V } from "react";
+var et = { exports: {} }, Pe = {};
 /**
  * @license React
  * react-jsx-runtime.production.min.js
@@ -9,25 +9,25 @@ var et = { exports: {} }, Oe = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var bt;
+var xt;
 function ir() {
-  if (bt)
-    return Oe;
-  bt = 1;
-  var o = rt, e = Symbol.for("react.element"), r = Symbol.for("react.fragment"), n = Object.prototype.hasOwnProperty, a = o.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, c = { key: !0, ref: !0, __self: !0, __source: !0 };
-  function u(s, f, g) {
-    var p, v = {}, b = null, T = null;
-    g !== void 0 && (b = "" + g), f.key !== void 0 && (b = "" + f.key), f.ref !== void 0 && (T = f.ref);
+  if (xt)
+    return Pe;
+  xt = 1;
+  var a = rt, e = Symbol.for("react.element"), r = Symbol.for("react.fragment"), n = Object.prototype.hasOwnProperty, o = a.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, c = { key: !0, ref: !0, __self: !0, __source: !0 };
+  function g(s, f, h) {
+    var p, y = {}, R = null, m = null;
+    h !== void 0 && (R = "" + h), f.key !== void 0 && (R = "" + f.key), f.ref !== void 0 && (m = f.ref);
     for (p in f)
-      n.call(f, p) && !c.hasOwnProperty(p) && (v[p] = f[p]);
+      n.call(f, p) && !c.hasOwnProperty(p) && (y[p] = f[p]);
     if (s && s.defaultProps)
       for (p in f = s.defaultProps, f)
-        v[p] === void 0 && (v[p] = f[p]);
-    return { $$typeof: e, type: s, key: b, ref: T, props: v, _owner: a.current };
+        y[p] === void 0 && (y[p] = f[p]);
+    return { $$typeof: e, type: s, key: R, ref: m, props: y, _owner: o.current };
   }
-  return Oe.Fragment = r, Oe.jsx = u, Oe.jsxs = u, Oe;
+  return Pe.Fragment = r, Pe.jsx = g, Pe.jsxs = g, Pe;
 }
-var Pe = {};
+var Me = {};
 /**
  * @license React
  * react-jsx-runtime.development.js
@@ -37,57 +37,57 @@ var Pe = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var Tt;
+var bt;
 function lr() {
-  return Tt || (Tt = 1, process.env.NODE_ENV !== "production" && function() {
-    var o = rt, e = Symbol.for("react.element"), r = Symbol.for("react.portal"), n = Symbol.for("react.fragment"), a = Symbol.for("react.strict_mode"), c = Symbol.for("react.profiler"), u = Symbol.for("react.provider"), s = Symbol.for("react.context"), f = Symbol.for("react.forward_ref"), g = Symbol.for("react.suspense"), p = Symbol.for("react.suspense_list"), v = Symbol.for("react.memo"), b = Symbol.for("react.lazy"), T = Symbol.for("react.offscreen"), y = Symbol.iterator, E = "@@iterator";
-    function w(t) {
+  return bt || (bt = 1, process.env.NODE_ENV !== "production" && function() {
+    var a = rt, e = Symbol.for("react.element"), r = Symbol.for("react.portal"), n = Symbol.for("react.fragment"), o = Symbol.for("react.strict_mode"), c = Symbol.for("react.profiler"), g = Symbol.for("react.provider"), s = Symbol.for("react.context"), f = Symbol.for("react.forward_ref"), h = Symbol.for("react.suspense"), p = Symbol.for("react.suspense_list"), y = Symbol.for("react.memo"), R = Symbol.for("react.lazy"), m = Symbol.for("react.offscreen"), v = Symbol.iterator, j = "@@iterator";
+    function C(t) {
       if (t === null || typeof t != "object")
         return null;
-      var i = y && t[y] || t[E];
+      var i = v && t[v] || t[j];
       return typeof i == "function" ? i : null;
     }
-    var _ = o.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
-    function h(t) {
+    var b = a.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+    function u(t) {
       {
         for (var i = arguments.length, d = new Array(i > 1 ? i - 1 : 0), x = 1; x < i; x++)
           d[x - 1] = arguments[x];
-        j("error", t, d);
+        T("error", t, d);
       }
     }
-    function j(t, i, d) {
+    function T(t, i, d) {
       {
-        var x = _.ReactDebugCurrentFrame, C = x.getStackAddendum();
-        C !== "" && (i += "%s", d = d.concat([C]));
-        var P = d.map(function(k) {
-          return String(k);
+        var x = b.ReactDebugCurrentFrame, E = x.getStackAddendum();
+        E !== "" && (i += "%s", d = d.concat([E]));
+        var L = d.map(function(D) {
+          return String(D);
         });
-        P.unshift("Warning: " + i), Function.prototype.apply.call(console[t], console, P);
+        L.unshift("Warning: " + i), Function.prototype.apply.call(console[t], console, L);
       }
     }
-    var m = !1, S = !1, H = !1, O = !1, ge = !1, ae;
-    ae = Symbol.for("react.module.reference");
-    function W(t) {
-      return !!(typeof t == "string" || typeof t == "function" || t === n || t === c || ge || t === a || t === g || t === p || O || t === T || m || S || H || typeof t == "object" && t !== null && (t.$$typeof === b || t.$$typeof === v || t.$$typeof === u || t.$$typeof === s || t.$$typeof === f || // This needs to include all possible module reference object
+    var _ = !1, w = !1, W = !1, I = !1, q = !1, he;
+    he = Symbol.for("react.module.reference");
+    function O(t) {
+      return !!(typeof t == "string" || typeof t == "function" || t === n || t === c || q || t === o || t === h || t === p || I || t === m || _ || w || W || typeof t == "object" && t !== null && (t.$$typeof === R || t.$$typeof === y || t.$$typeof === g || t.$$typeof === s || t.$$typeof === f || // This needs to include all possible module reference object
       // types supported by any Flight configuration anywhere since
       // we don't know which Flight build this will end up being used
       // with.
-      t.$$typeof === ae || t.getModuleId !== void 0));
+      t.$$typeof === he || t.getModuleId !== void 0));
     }
-    function I(t, i, d) {
+    function B(t, i, d) {
       var x = t.displayName;
       if (x)
         return x;
-      var C = i.displayName || i.name || "";
-      return C !== "" ? d + "(" + C + ")" : d;
+      var E = i.displayName || i.name || "";
+      return E !== "" ? d + "(" + E + ")" : d;
     }
-    function J(t) {
+    function z(t) {
       return t.displayName || "Context";
     }
-    function M(t) {
+    function N(t) {
       if (t == null)
         return null;
-      if (typeof t.tag == "number" && h("Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."), typeof t == "function")
+      if (typeof t.tag == "number" && u("Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."), typeof t == "function")
         return t.displayName || t.name || null;
       if (typeof t == "string")
         return t;
@@ -98,9 +98,9 @@ function lr() {
           return "Portal";
         case c:
           return "Profiler";
-        case a:
+        case o:
           return "StrictMode";
-        case g:
+        case h:
           return "Suspense";
         case p:
           return "SuspenseList";
@@ -109,19 +109,19 @@ function lr() {
         switch (t.$$typeof) {
           case s:
             var i = t;
-            return J(i) + ".Consumer";
-          case u:
+            return z(i) + ".Consumer";
+          case g:
             var d = t;
-            return J(d._context) + ".Provider";
+            return z(d._context) + ".Provider";
           case f:
-            return I(t, t.render, "ForwardRef");
-          case v:
+            return B(t, t.render, "ForwardRef");
+          case y:
             var x = t.displayName || null;
-            return x !== null ? x : M(t.type) || "Memo";
-          case b: {
-            var C = t, P = C._payload, k = C._init;
+            return x !== null ? x : N(t.type) || "Memo";
+          case R: {
+            var E = t, L = E._payload, D = E._init;
             try {
-              return M(k(P));
+              return N(D(L));
             } catch {
               return null;
             }
@@ -129,18 +129,18 @@ function lr() {
         }
       return null;
     }
-    var N = Object.assign, q = 0, ce, Z, de, $, ie, G, Ee;
-    function me() {
+    var P = Object.assign, Z = 0, ce, re, ge, se, G, K, ue;
+    function Se() {
     }
-    me.__reactDisabledLog = !0;
-    function $e() {
+    Se.__reactDisabledLog = !0;
+    function ke() {
       {
-        if (q === 0) {
-          ce = console.log, Z = console.info, de = console.warn, $ = console.error, ie = console.group, G = console.groupCollapsed, Ee = console.groupEnd;
+        if (Z === 0) {
+          ce = console.log, re = console.info, ge = console.warn, se = console.error, G = console.group, K = console.groupCollapsed, ue = console.groupEnd;
           var t = {
             configurable: !0,
             enumerable: !0,
-            value: me,
+            value: Se,
             writable: !0
           };
           Object.defineProperties(console, {
@@ -153,100 +153,100 @@ function lr() {
             groupEnd: t
           });
         }
-        q++;
+        Z++;
       }
     }
-    function xe() {
+    function Ye() {
       {
-        if (q--, q === 0) {
+        if (Z--, Z === 0) {
           var t = {
             configurable: !0,
             enumerable: !0,
             writable: !0
           };
           Object.defineProperties(console, {
-            log: N({}, t, {
+            log: P({}, t, {
               value: ce
             }),
-            info: N({}, t, {
-              value: Z
+            info: P({}, t, {
+              value: re
             }),
-            warn: N({}, t, {
-              value: de
+            warn: P({}, t, {
+              value: ge
             }),
-            error: N({}, t, {
-              value: $
+            error: P({}, t, {
+              value: se
             }),
-            group: N({}, t, {
-              value: ie
-            }),
-            groupCollapsed: N({}, t, {
+            group: P({}, t, {
               value: G
             }),
-            groupEnd: N({}, t, {
-              value: Ee
+            groupCollapsed: P({}, t, {
+              value: K
+            }),
+            groupEnd: P({}, t, {
+              value: ue
             })
           });
         }
-        q < 0 && h("disabledDepth fell below zero. This is a bug in React. Please file an issue.");
+        Z < 0 && u("disabledDepth fell below zero. This is a bug in React. Please file an issue.");
       }
     }
-    var ve = _.ReactCurrentDispatcher, ee;
-    function pe(t, i, d) {
+    var fe = b.ReactCurrentDispatcher, me;
+    function ee(t, i, d) {
       {
-        if (ee === void 0)
+        if (me === void 0)
           try {
             throw Error();
-          } catch (C) {
-            var x = C.stack.trim().match(/\n( *(at )?)/);
-            ee = x && x[1] || "";
+          } catch (E) {
+            var x = E.stack.trim().match(/\n( *(at )?)/);
+            me = x && x[1] || "";
           }
         return `
-` + ee + t;
+` + me + t;
       }
     }
-    var te = !1, fe;
+    var ve = !1, te;
     {
-      var We = typeof WeakMap == "function" ? WeakMap : Map;
-      fe = new We();
+      var Re = typeof WeakMap == "function" ? WeakMap : Map;
+      te = new Re();
     }
-    function be(t, i) {
-      if (!t || te)
+    function De(t, i) {
+      if (!t || ve)
         return "";
       {
-        var d = fe.get(t);
+        var d = te.get(t);
         if (d !== void 0)
           return d;
       }
       var x;
-      te = !0;
-      var C = Error.prepareStackTrace;
+      ve = !0;
+      var E = Error.prepareStackTrace;
       Error.prepareStackTrace = void 0;
-      var P;
-      P = ve.current, ve.current = null, $e();
+      var L;
+      L = fe.current, fe.current = null, ke();
       try {
         if (i) {
-          var k = function() {
+          var D = function() {
             throw Error();
           };
-          if (Object.defineProperty(k.prototype, "props", {
+          if (Object.defineProperty(D.prototype, "props", {
             set: function() {
               throw Error();
             }
           }), typeof Reflect == "object" && Reflect.construct) {
             try {
-              Reflect.construct(k, []);
+              Reflect.construct(D, []);
             } catch (Q) {
               x = Q;
             }
-            Reflect.construct(t, [], k);
+            Reflect.construct(t, [], D);
           } else {
             try {
-              k.call();
+              D.call();
             } catch (Q) {
               x = Q;
             }
-            t.call(k.prototype);
+            t.call(D.prototype);
           }
         } else {
           try {
@@ -258,95 +258,95 @@ function lr() {
         }
       } catch (Q) {
         if (Q && x && typeof Q.stack == "string") {
-          for (var D = Q.stack.split(`
-`), K = x.stack.split(`
-`), B = D.length - 1, Y = K.length - 1; B >= 1 && Y >= 0 && D[B] !== K[Y]; )
+          for (var k = Q.stack.split(`
+`), J = x.stack.split(`
+`), $ = k.length - 1, Y = J.length - 1; $ >= 1 && Y >= 0 && k[$] !== J[Y]; )
             Y--;
-          for (; B >= 1 && Y >= 0; B--, Y--)
-            if (D[B] !== K[Y]) {
-              if (B !== 1 || Y !== 1)
+          for (; $ >= 1 && Y >= 0; $--, Y--)
+            if (k[$] !== J[Y]) {
+              if ($ !== 1 || Y !== 1)
                 do
-                  if (B--, Y--, Y < 0 || D[B] !== K[Y]) {
-                    var re = `
-` + D[B].replace(" at new ", " at ");
-                    return t.displayName && re.includes("<anonymous>") && (re = re.replace("<anonymous>", t.displayName)), typeof t == "function" && fe.set(t, re), re;
+                  if ($--, Y--, Y < 0 || k[$] !== J[Y]) {
+                    var ae = `
+` + k[$].replace(" at new ", " at ");
+                    return t.displayName && ae.includes("<anonymous>") && (ae = ae.replace("<anonymous>", t.displayName)), typeof t == "function" && te.set(t, ae), ae;
                   }
-                while (B >= 1 && Y >= 0);
+                while ($ >= 1 && Y >= 0);
               break;
             }
         }
       } finally {
-        te = !1, ve.current = P, xe(), Error.prepareStackTrace = C;
+        ve = !1, fe.current = L, Ye(), Error.prepareStackTrace = E;
       }
-      var Se = t ? t.displayName || t.name : "", ye = Se ? pe(Se) : "";
-      return typeof t == "function" && fe.set(t, ye), ye;
+      var _e = t ? t.displayName || t.name : "", pe = _e ? ee(_e) : "";
+      return typeof t == "function" && te.set(t, pe), pe;
     }
-    function oe(t, i, d) {
-      return be(t, !1);
+    function Ee(t, i, d) {
+      return De(t, !1);
     }
-    function Te(t) {
+    function ie(t) {
       var i = t.prototype;
       return !!(i && i.isReactComponent);
     }
-    function se(t, i, d) {
+    function de(t, i, d) {
       if (t == null)
         return "";
       if (typeof t == "function")
-        return be(t, Te(t));
+        return De(t, ie(t));
       if (typeof t == "string")
-        return pe(t);
+        return ee(t);
       switch (t) {
-        case g:
-          return pe("Suspense");
+        case h:
+          return ee("Suspense");
         case p:
-          return pe("SuspenseList");
+          return ee("SuspenseList");
       }
       if (typeof t == "object")
         switch (t.$$typeof) {
           case f:
-            return oe(t.render);
-          case v:
-            return se(t.type, i, d);
-          case b: {
-            var x = t, C = x._payload, P = x._init;
+            return Ee(t.render);
+          case y:
+            return de(t.type, i, d);
+          case R: {
+            var x = t, E = x._payload, L = x._init;
             try {
-              return se(P(C), i, d);
+              return de(L(E), i, d);
             } catch {
             }
           }
         }
       return "";
     }
-    var ue = Object.prototype.hasOwnProperty, Ne = {}, Fe = _.ReactDebugCurrentFrame;
-    function _e(t) {
+    var ne = Object.prototype.hasOwnProperty, xe = {}, Fe = b.ReactDebugCurrentFrame;
+    function be(t) {
       if (t) {
-        var i = t._owner, d = se(t.type, t._source, i ? i.type : null);
+        var i = t._owner, d = de(t.type, t._source, i ? i.type : null);
         Fe.setExtraStackFrame(d);
       } else
         Fe.setExtraStackFrame(null);
     }
-    function Ye(t, i, d, x, C) {
+    function Ae(t, i, d, x, E) {
       {
-        var P = Function.call.bind(ue);
-        for (var k in t)
-          if (P(t, k)) {
-            var D = void 0;
+        var L = Function.call.bind(ne);
+        for (var D in t)
+          if (L(t, D)) {
+            var k = void 0;
             try {
-              if (typeof t[k] != "function") {
-                var K = Error((x || "React class") + ": " + d + " type `" + k + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof t[k] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
-                throw K.name = "Invariant Violation", K;
+              if (typeof t[D] != "function") {
+                var J = Error((x || "React class") + ": " + d + " type `" + D + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof t[D] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
+                throw J.name = "Invariant Violation", J;
               }
-              D = t[k](i, k, x, d, null, "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED");
-            } catch (B) {
-              D = B;
+              k = t[D](i, D, x, d, null, "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED");
+            } catch ($) {
+              k = $;
             }
-            D && !(D instanceof Error) && (_e(C), h("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", x || "React class", d, k, typeof D), _e(null)), D instanceof Error && !(D.message in Ne) && (Ne[D.message] = !0, _e(C), h("Failed %s type: %s", d, D.message), _e(null));
+            k && !(k instanceof Error) && (be(E), u("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", x || "React class", d, D, typeof k), be(null)), k instanceof Error && !(k.message in xe) && (xe[k.message] = !0, be(E), u("Failed %s type: %s", d, k.message), be(null));
           }
       }
     }
-    var Ae = Array.isArray;
-    function ke(t) {
-      return Ae(t);
+    var Xe = Array.isArray;
+    function Ce(t) {
+      return Xe(t);
     }
     function ze(t) {
       {
@@ -356,35 +356,35 @@ function lr() {
     }
     function Ue(t) {
       try {
-        return R(t), !1;
+        return We(t), !1;
       } catch {
         return !0;
       }
     }
-    function R(t) {
+    function We(t) {
       return "" + t;
     }
-    function F(t) {
+    function S(t) {
       if (Ue(t))
-        return h("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", ze(t)), R(t);
+        return u("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", ze(t)), We(t);
     }
-    var L = _.ReactCurrentOwner, X = {
+    var M = b.ReactCurrentOwner, H = {
       key: !0,
       ref: !0,
       __self: !0,
       __source: !0
-    }, Ce, ft, Ge;
+    }, F, Oe, Ge;
     Ge = {};
-    function Yt(t) {
-      if (ue.call(t, "ref")) {
+    function At(t) {
+      if (ne.call(t, "ref")) {
         var i = Object.getOwnPropertyDescriptor(t, "ref").get;
         if (i && i.isReactWarning)
           return !1;
       }
       return t.ref !== void 0;
     }
-    function At(t) {
-      if (ue.call(t, "key")) {
+    function Xt(t) {
+      if (ne.call(t, "key")) {
         var i = Object.getOwnPropertyDescriptor(t, "key").get;
         if (i && i.isReactWarning)
           return !1;
@@ -392,15 +392,15 @@ function lr() {
       return t.key !== void 0;
     }
     function zt(t, i) {
-      if (typeof t.ref == "string" && L.current && i && L.current.stateNode !== i) {
-        var d = M(L.current.type);
-        Ge[d] || (h('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. This case cannot be automatically converted to an arrow function. We ask you to manually fix this case by using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', M(L.current.type), t.ref), Ge[d] = !0);
+      if (typeof t.ref == "string" && M.current && i && M.current.stateNode !== i) {
+        var d = N(M.current.type);
+        Ge[d] || (u('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. This case cannot be automatically converted to an arrow function. We ask you to manually fix this case by using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', N(M.current.type), t.ref), Ge[d] = !0);
       }
     }
     function Ut(t, i) {
       {
         var d = function() {
-          Ce || (Ce = !0, h("%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", i));
+          F || (F = !0, u("%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", i));
         };
         d.isReactWarning = !0, Object.defineProperty(t, "key", {
           get: d,
@@ -411,7 +411,7 @@ function lr() {
     function Gt(t, i) {
       {
         var d = function() {
-          ft || (ft = !0, h("%s: `ref` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", i));
+          Oe || (Oe = !0, u("%s: `ref` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", i));
         };
         d.isReactWarning = !0, Object.defineProperty(t, "ref", {
           get: d,
@@ -419,70 +419,70 @@ function lr() {
         });
       }
     }
-    var Kt = function(t, i, d, x, C, P, k) {
-      var D = {
+    var Kt = function(t, i, d, x, E, L, D) {
+      var k = {
         // This tag allows us to uniquely identify this as a React Element
         $$typeof: e,
         // Built-in properties that belong on the element
         type: t,
         key: i,
         ref: d,
-        props: k,
+        props: D,
         // Record the component responsible for creating this element.
-        _owner: P
+        _owner: L
       };
-      return D._store = {}, Object.defineProperty(D._store, "validated", {
+      return k._store = {}, Object.defineProperty(k._store, "validated", {
         configurable: !1,
         enumerable: !1,
         writable: !0,
         value: !1
-      }), Object.defineProperty(D, "_self", {
+      }), Object.defineProperty(k, "_self", {
         configurable: !1,
         enumerable: !1,
         writable: !1,
         value: x
-      }), Object.defineProperty(D, "_source", {
+      }), Object.defineProperty(k, "_source", {
         configurable: !1,
         enumerable: !1,
         writable: !1,
-        value: C
-      }), Object.freeze && (Object.freeze(D.props), Object.freeze(D)), D;
+        value: E
+      }), Object.freeze && (Object.freeze(k.props), Object.freeze(k)), k;
     };
-    function Jt(t, i, d, x, C) {
+    function Jt(t, i, d, x, E) {
       {
-        var P, k = {}, D = null, K = null;
-        d !== void 0 && (F(d), D = "" + d), At(i) && (F(i.key), D = "" + i.key), Yt(i) && (K = i.ref, zt(i, C));
-        for (P in i)
-          ue.call(i, P) && !X.hasOwnProperty(P) && (k[P] = i[P]);
+        var L, D = {}, k = null, J = null;
+        d !== void 0 && (S(d), k = "" + d), Xt(i) && (S(i.key), k = "" + i.key), At(i) && (J = i.ref, zt(i, E));
+        for (L in i)
+          ne.call(i, L) && !H.hasOwnProperty(L) && (D[L] = i[L]);
         if (t && t.defaultProps) {
-          var B = t.defaultProps;
-          for (P in B)
-            k[P] === void 0 && (k[P] = B[P]);
+          var $ = t.defaultProps;
+          for (L in $)
+            D[L] === void 0 && (D[L] = $[L]);
         }
-        if (D || K) {
+        if (k || J) {
           var Y = typeof t == "function" ? t.displayName || t.name || "Unknown" : t;
-          D && Ut(k, Y), K && Gt(k, Y);
+          k && Ut(D, Y), J && Gt(D, Y);
         }
-        return Kt(t, D, K, C, x, L.current, k);
+        return Kt(t, k, J, E, x, M.current, D);
       }
     }
-    var Ke = _.ReactCurrentOwner, ht = _.ReactDebugCurrentFrame;
-    function je(t) {
+    var Ke = b.ReactCurrentOwner, ft = b.ReactDebugCurrentFrame;
+    function Te(t) {
       if (t) {
-        var i = t._owner, d = se(t.type, t._source, i ? i.type : null);
-        ht.setExtraStackFrame(d);
+        var i = t._owner, d = de(t.type, t._source, i ? i.type : null);
+        ft.setExtraStackFrame(d);
       } else
-        ht.setExtraStackFrame(null);
+        ft.setExtraStackFrame(null);
     }
     var Je;
     Je = !1;
     function Qe(t) {
       return typeof t == "object" && t !== null && t.$$typeof === e;
     }
-    function gt() {
+    function ht() {
       {
         if (Ke.current) {
-          var t = M(Ke.current.type);
+          var t = N(Ke.current.type);
           if (t)
             return `
 
@@ -494,10 +494,10 @@ Check the render method of \`` + t + "`.";
     function Qt(t) {
       return "";
     }
-    var pt = {};
+    var gt = {};
     function qt(t) {
       {
-        var i = gt();
+        var i = ht();
         if (!i) {
           var d = typeof t == "string" ? t : t.displayName || t.name;
           d && (i = `
@@ -507,35 +507,35 @@ Check the top-level render call using <` + d + ">.");
         return i;
       }
     }
-    function yt(t, i) {
+    function pt(t, i) {
       {
         if (!t._store || t._store.validated || t.key != null)
           return;
         t._store.validated = !0;
         var d = qt(i);
-        if (pt[d])
+        if (gt[d])
           return;
-        pt[d] = !0;
+        gt[d] = !0;
         var x = "";
-        t && t._owner && t._owner !== Ke.current && (x = " It was passed a child from " + M(t._owner.type) + "."), je(t), h('Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.', d, x), je(null);
+        t && t._owner && t._owner !== Ke.current && (x = " It was passed a child from " + N(t._owner.type) + "."), Te(t), u('Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.', d, x), Te(null);
       }
     }
-    function mt(t, i) {
+    function yt(t, i) {
       {
         if (typeof t != "object")
           return;
-        if (ke(t))
+        if (Ce(t))
           for (var d = 0; d < t.length; d++) {
             var x = t[d];
-            Qe(x) && yt(x, i);
+            Qe(x) && pt(x, i);
           }
         else if (Qe(t))
           t._store && (t._store.validated = !0);
         else if (t) {
-          var C = w(t);
-          if (typeof C == "function" && C !== t.entries)
-            for (var P = C.call(t), k; !(k = P.next()).done; )
-              Qe(k.value) && yt(k.value, i);
+          var E = C(t);
+          if (typeof E == "function" && E !== t.entries)
+            for (var L = E.call(t), D; !(D = L.next()).done; )
+              Qe(D.value) && pt(D.value, i);
         }
       }
     }
@@ -549,19 +549,19 @@ Check the top-level render call using <` + d + ">.");
           d = i.propTypes;
         else if (typeof i == "object" && (i.$$typeof === f || // Note: Memo only checks outer props here.
         // Inner props are checked in the reconciler.
-        i.$$typeof === v))
+        i.$$typeof === y))
           d = i.propTypes;
         else
           return;
         if (d) {
-          var x = M(i);
-          Ye(d, t.props, "prop", x, t);
+          var x = N(i);
+          Ae(d, t.props, "prop", x, t);
         } else if (i.PropTypes !== void 0 && !Je) {
           Je = !0;
-          var C = M(i);
-          h("Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?", C || "Unknown");
+          var E = N(i);
+          u("Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?", E || "Unknown");
         }
-        typeof i.getDefaultProps == "function" && !i.getDefaultProps.isReactClassApproved && h("getDefaultProps is only used on classic React.createClass definitions. Use a static property named `defaultProps` instead.");
+        typeof i.getDefaultProps == "function" && !i.getDefaultProps.isReactClassApproved && u("getDefaultProps is only used on classic React.createClass definitions. Use a static property named `defaultProps` instead.");
       }
     }
     function er(t) {
@@ -569,53 +569,53 @@ Check the top-level render call using <` + d + ">.");
         for (var i = Object.keys(t.props), d = 0; d < i.length; d++) {
           var x = i[d];
           if (x !== "children" && x !== "key") {
-            je(t), h("Invalid prop `%s` supplied to `React.Fragment`. React.Fragment can only have `key` and `children` props.", x), je(null);
+            Te(t), u("Invalid prop `%s` supplied to `React.Fragment`. React.Fragment can only have `key` and `children` props.", x), Te(null);
             break;
           }
         }
-        t.ref !== null && (je(t), h("Invalid attribute `ref` supplied to `React.Fragment`."), je(null));
+        t.ref !== null && (Te(t), u("Invalid attribute `ref` supplied to `React.Fragment`."), Te(null));
       }
     }
-    var xt = {};
-    function vt(t, i, d, x, C, P) {
+    var mt = {};
+    function vt(t, i, d, x, E, L) {
       {
-        var k = W(t);
-        if (!k) {
-          var D = "";
-          (t === void 0 || typeof t == "object" && t !== null && Object.keys(t).length === 0) && (D += " You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.");
-          var K = Qt();
-          K ? D += K : D += gt();
-          var B;
-          t === null ? B = "null" : ke(t) ? B = "array" : t !== void 0 && t.$$typeof === e ? (B = "<" + (M(t.type) || "Unknown") + " />", D = " Did you accidentally export a JSX literal instead of a component?") : B = typeof t, h("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", B, D);
+        var D = O(t);
+        if (!D) {
+          var k = "";
+          (t === void 0 || typeof t == "object" && t !== null && Object.keys(t).length === 0) && (k += " You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.");
+          var J = Qt();
+          J ? k += J : k += ht();
+          var $;
+          t === null ? $ = "null" : Ce(t) ? $ = "array" : t !== void 0 && t.$$typeof === e ? ($ = "<" + (N(t.type) || "Unknown") + " />", k = " Did you accidentally export a JSX literal instead of a component?") : $ = typeof t, u("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", $, k);
         }
-        var Y = Jt(t, i, d, C, P);
+        var Y = Jt(t, i, d, E, L);
         if (Y == null)
           return Y;
-        if (k) {
-          var re = i.children;
-          if (re !== void 0)
+        if (D) {
+          var ae = i.children;
+          if (ae !== void 0)
             if (x)
-              if (ke(re)) {
-                for (var Se = 0; Se < re.length; Se++)
-                  mt(re[Se], t);
-                Object.freeze && Object.freeze(re);
+              if (Ce(ae)) {
+                for (var _e = 0; _e < ae.length; _e++)
+                  yt(ae[_e], t);
+                Object.freeze && Object.freeze(ae);
               } else
-                h("React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead.");
+                u("React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead.");
             else
-              mt(re, t);
+              yt(ae, t);
         }
-        if (ue.call(i, "key")) {
-          var ye = M(t), Q = Object.keys(i).filter(function(ar) {
-            return ar !== "key";
+        if (ne.call(i, "key")) {
+          var pe = N(t), Q = Object.keys(i).filter(function(sr) {
+            return sr !== "key";
           }), qe = Q.length > 0 ? "{key: someKey, " + Q.join(": ..., ") + ": ...}" : "{key: someKey}";
-          if (!xt[ye + qe]) {
-            var sr = Q.length > 0 ? "{" + Q.join(": ..., ") + ": ...}" : "{}";
-            h(`A props object containing a "key" prop is being spread into JSX:
+          if (!mt[pe + qe]) {
+            var or = Q.length > 0 ? "{" + Q.join(": ..., ") + ": ...}" : "{}";
+            u(`A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
 React keys must be passed directly to JSX without using spread:
   let props = %s;
-  <%s key={someKey} {...props} />`, qe, ye, sr, ye), xt[ye + qe] = !0;
+  <%s key={someKey} {...props} />`, qe, pe, or, pe), mt[pe + qe] = !0;
           }
         }
         return t === n ? er(Y) : Zt(Y), Y;
@@ -627,25 +627,25 @@ React keys must be passed directly to JSX without using spread:
     function rr(t, i, d) {
       return vt(t, i, d, !1);
     }
-    var nr = rr, or = tr;
-    Pe.Fragment = n, Pe.jsx = nr, Pe.jsxs = or;
-  }()), Pe;
+    var nr = rr, ar = tr;
+    Me.Fragment = n, Me.jsx = nr, Me.jsxs = ar;
+  }()), Me;
 }
 process.env.NODE_ENV === "production" ? et.exports = ir() : et.exports = lr();
 var l = et.exports;
-const jt = ({
-  scroll: o,
+const _t = ({
+  scroll: a,
   rootStyle: e,
   bodyStyle: r,
   onScroll: n
 }) => {
-  const a = le(null);
-  return z(() => {
-    a.current && (a.current.scrollLeft = o);
-  }, [o]), /* @__PURE__ */ l.jsx(
+  const o = le(null);
+  return X(() => {
+    o.current && (o.current.scrollLeft = a);
+  }, [a]), /* @__PURE__ */ l.jsx(
     "div",
     {
-      ref: a,
+      ref: o,
       dir: "ltr",
       className: "horizontal-scroll-root",
       style: e,
@@ -653,309 +653,242 @@ const jt = ({
       children: /* @__PURE__ */ l.jsx("div", { className: "horizontal-scroll-body", style: r })
     }
   );
-}, Ze = ["#58d9a4", "#8777da", "#ffc400", "#ff9a1f", "#2684ff", "#fe7551", "#00c8e5", "#0052ca", "#5345a8"], St = "#fac365", nt = (o, e = ot) => {
-  const { tasks: r, dates: n } = o;
-  let a = -1;
+}, Ze = ["#58d9a4", "#8777da", "#ffc400", "#ff9a1f", "#2684ff", "#fe7551", "#00c8e5", "#0052ca", "#5345a8"], jt = "#fac365", nt = (a, e = at) => {
+  const { tasks: r, dates: n } = a;
+  let o = -1;
   const c = n[1].getTime() - n[0].getTime() - n[1].getTimezoneOffset() * 60 * 1e3 + n[0].getTimezoneOffset() * 60 * 1e3;
-  return r.map((u, s) => (u.type === "project" && a++, e({
-    ...o,
-    task: u,
-    taskIndex: s,
-    dateDelta: c
-  }, a)));
-}, ot = (o, e) => {
+  return r.map((g, s) => (g.type === "project" && o++, e(
+    {
+      ...a,
+      task: g,
+      taskIndex: s,
+      dateDelta: c
+    },
+    o
+  )));
+}, at = (a, e) => {
   const r = e > Ze.length ? e % Ze.length : e, n = Ze[r];
   return {
-    task: st({ ...o, backgroundColor: n }),
-    project: at({ ...o, backgroundColor: n })
-  }[o.task.type];
-}, st = (o) => {
+    task: ot({ ...a, backgroundColor: n }),
+    project: st({ ...a, backgroundColor: n })
+  }[a.task.type];
+}, ot = (a) => {
   const {
     task: e,
     taskIndex: r,
     dates: n,
-    dateDelta: a,
+    dateDelta: o,
     rtl: c,
-    multiBarRowMode: u,
+    multiBarRowMode: g,
     // style
     columnWidth: s,
     rowHeight: f,
-    taskHeight: g,
+    taskHeight: h,
     barCornerRadius: p,
-    handleWidth: v,
-    backgroundColor: b
-  } = o;
-  let T, y;
-  c ? (y = Ie(e.start, n, a, s), T = Ie(e.end, n, a, s)) : (T = Le(e.start, n, a, s), y = Le(e.end, n, a, s));
-  let E = e.type;
-  E === "task" && y - T < v * 2 && (E = "smalltask", y = T + v * 2);
-  const [w, _] = he(
-    T,
-    y,
-    e.progress,
-    c
-  ), h = u === !0 && typeof e.line < "u" ? e.line : r, j = wt(h, f, g), m = e.type === "project" ? e.expanded : void 0, S = {
-    backgroundColor: b || St,
+    handleWidth: y,
+    backgroundColor: R
+  } = a;
+  let m, v;
+  c ? (v = Ie(e.start, n, o, s), m = Ie(e.end, n, o, s)) : (m = Ne(e.start, n, o, s), v = Ne(e.end, n, o, s));
+  let j = e.type;
+  j === "task" && v - m < y * 2 && (j = "smalltask", v = m + y * 2);
+  const C = g === !0 && typeof e.line < "u" ? e.line : r, b = wt(C, f, h), u = e.type === "project" ? e.expanded : void 0, T = {
+    backgroundColor: R || jt,
     ...e.styles
   };
   return {
     ...e,
-    typeInternal: E,
-    x1: T,
-    x2: y,
-    y: j,
+    typeInternal: j,
+    x1: m,
+    x2: v,
+    y: b,
     index: r,
-    progressX: _,
-    progressWidth: w,
     barCornerRadius: p,
-    handleWidth: v,
-    expanded: m,
-    height: g,
+    handleWidth: y,
+    expanded: u,
+    height: h,
     barChildren: [],
-    styles: S
+    styles: T
   };
-}, at = (o) => {
+}, st = (a) => {
   const {
     task: e,
     taskIndex: r,
     dates: n,
-    dateDelta: a,
+    dateDelta: o,
     rtl: c,
-    multiBarRowMode: u,
+    multiBarRowMode: g,
     // style
     columnWidth: s,
     rowHeight: f,
-    taskHeight: g,
+    taskHeight: h,
     barCornerRadius: p,
-    handleWidth: v,
-    backgroundColor: b
-  } = o;
-  let T, y;
-  c ? (y = Ie(e.start, n, a, s), T = Ie(e.end, n, a, s)) : (T = Le(e.start, n, a, s), y = Le(e.end, n, a, s));
-  const [E, w] = he(
-    T,
-    y,
-    e.progress,
-    c
-  ), _ = u === !0 && typeof e.line < "u" ? e.line : r, h = wt(_, f, g), j = e.type === "project" ? e.expanded : void 0, m = {
-    backgroundColor: b || St,
+    handleWidth: y,
+    backgroundColor: R
+  } = a;
+  let m, v;
+  c ? (v = Ie(e.start, n, o, s), m = Ie(e.end, n, o, s)) : (m = Ne(e.start, n, o, s), v = Ne(e.end, n, o, s));
+  const j = g === !0 && typeof e.line < "u" ? e.line : r, C = wt(j, f, h), b = e.type === "project" ? e.expanded : void 0, u = {
+    backgroundColor: R || jt,
     ...e.styles
   };
   return {
     ...e,
     typeInternal: e.type,
-    x1: T,
-    x2: y,
-    y: h,
+    x1: m,
+    x2: v,
+    y: C,
     index: r,
-    progressX: w,
-    progressWidth: E,
     barCornerRadius: p,
-    handleWidth: v,
-    expanded: j,
-    height: g,
+    handleWidth: y,
+    expanded: b,
+    height: h,
     barChildren: [],
-    styles: m
+    styles: u
   };
-}, Le = (o, e, r, n) => {
-  const a = ~~((o.getTime() - e[0].getTime() + o.getTimezoneOffset() - e[0].getTimezoneOffset()) / r);
+}, Ne = (a, e, r, n) => {
+  const o = ~~((a.getTime() - e[0].getTime() + a.getTimezoneOffset() - e[0].getTimezoneOffset()) / r);
   return Math.round(
-    (a + (o.getTime() - e[a].getTime() - o.getTimezoneOffset() * 60 * 1e3 + e[a].getTimezoneOffset() * 60 * 1e3) / r) * n
+    (o + (a.getTime() - e[o].getTime() - a.getTimezoneOffset() * 60 * 1e3 + e[o].getTimezoneOffset() * 60 * 1e3) / r) * n
   );
-}, Ie = (o, e, r, n) => {
-  let a = Le(o, e, r, n);
-  return a += n, a;
-}, wt = (o, e, r) => o * e + (e - r) / 2, he = (o, e, r, n) => {
-  const a = (e - o) * r * 0.01;
-  let c;
-  return n ? c = e - a : c = o, [a, c];
-}, Rt = (o, e) => {
-  const r = e.x2 - e.x1, n = Math.round(o * 100 / r);
+}, Ie = (a, e, r, n) => {
+  let o = Ne(a, e, r, n);
+  return o += n, o;
+}, wt = (a, e, r) => a * e + (e - r) / 2, St = (a, e, r) => {
+  const n = (e - a) * 0.01;
+  let o;
+  return r ? o = e - n : o = a, [n, o];
+}, kt = (a, e) => {
+  const r = e.x2 - e.x1, n = Math.round(a * 100 / r);
   return n >= 100 ? 100 : n <= 0 ? 0 : n;
-}, cr = (o, e) => {
-  if (o >= e.x2)
-    return 100;
-  if (o <= e.x1)
-    return 0;
-  {
-    const r = e.x2 - e.x1;
-    return Math.round((o - e.x1) * 100 / r);
-  }
-}, ur = (o, e) => {
-  if (o >= e.x2)
-    return 0;
-  if (o <= e.x1)
-    return 100;
-  {
-    const r = e.x2 - e.x1;
-    return Math.round((e.x2 - o) * 100 / r);
-  }
-}, Dt = (o, e, r) => [
-  o - 5,
+}, Rt = (a, e, r) => [
+  a - 5,
   e + r,
-  o + 5,
+  a + 5,
   e + r,
-  o,
+  a,
   e + r - 8.66
-].join(","), dr = (o, e, r) => {
-  o >= r.x2 - r.handleWidth * 2 && (o = r.x2 - r.handleWidth * 2);
-  const a = Math.round((o - r.x1) / e) * e;
-  return r.x1 + a;
-}, fr = (o, e, r) => {
-  o <= r.x1 + r.handleWidth * 2 && (o = r.x1 + r.handleWidth * 2);
-  const a = Math.round((o - r.x2) / e) * e;
-  return r.x2 + a;
-}, hr = (o, e, r) => {
-  const a = Math.round((o - r.x1) / e) * e, c = r.x1 + a, u = c + r.x2 - r.x1;
-  return [c, u];
-}, we = (o, e, r, n, a) => {
-  let c = new Date((o - e) / n * a + r.getTime());
+].join(","), cr = (a, e, r) => {
+  a >= r.x2 - r.handleWidth * 2 && (a = r.x2 - r.handleWidth * 2);
+  const o = Math.round((a - r.x1) / e) * e;
+  return r.x1 + o;
+}, ur = (a, e, r) => {
+  a <= r.x1 + r.handleWidth * 2 && (a = r.x1 + r.handleWidth * 2);
+  const o = Math.round((a - r.x2) / e) * e;
+  return r.x2 + o;
+}, dr = (a, e, r) => {
+  const o = Math.round((a - r.x1) / e) * e, c = r.x1 + o, g = c + r.x2 - r.x1;
+  return [c, g];
+}, je = (a, e, r, n, o) => {
+  let c = new Date((a - e) / n * o + r.getTime());
   return c = new Date(
     c.getTime() + (c.getTimezoneOffset() - r.getTimezoneOffset()) * 6e4
   ), c;
-}, He = (o, e, r, n, a, c, u) => {
+}, He = (a, e, r, n, o, c, g) => {
   let s;
   switch (r.type) {
     default:
-      s = gr(
-        o,
+      s = fr(
+        a,
         e,
         r,
         n,
-        a,
+        o,
         c,
-        u
+        g
       );
       break;
   }
   return s;
-}, gr = (o, e, r, n, a, c, u) => {
+}, fr = (a, e, r, n, o, c, g) => {
   const s = { ...r };
   let f = !1;
   switch (e) {
-    case "progress":
-      if (u ? s.progress = ur(o, r) : s.progress = cr(o, r), f = s.progress !== r.progress, f) {
-        const [g, p] = he(
-          s.x1,
-          s.x2,
-          s.progress,
-          u
-        );
-        s.progressWidth = g, s.progressX = p;
-      }
-      break;
     case "start": {
-      const g = dr(o, n, r);
-      if (s.x1 = g, f = s.x1 !== r.x1, f) {
-        u ? s.end = we(
-          g,
-          r.x1,
-          r.end,
-          n,
-          a
-        ) : s.start = we(
-          g,
-          r.x1,
-          r.start,
-          n,
-          a
-        );
-        const [p, v] = he(
-          s.x1,
-          s.x2,
-          s.progress,
-          u
-        );
-        s.progressWidth = p, s.progressX = v;
-      }
+      const h = cr(a, n, r);
+      s.x1 = h, f = s.x1 !== r.x1, f && (g ? s.end = je(
+        h,
+        r.x1,
+        r.end,
+        n,
+        o
+      ) : s.start = je(
+        h,
+        r.x1,
+        r.start,
+        n,
+        o
+      ));
       break;
     }
     case "end": {
-      const g = fr(o, n, r);
-      if (s.x2 = g, f = s.x2 !== r.x2, f) {
-        u ? s.start = we(
-          g,
-          r.x2,
-          r.start,
-          n,
-          a
-        ) : s.end = we(
-          g,
-          r.x2,
-          r.end,
-          n,
-          a
-        );
-        const [p, v] = he(
-          s.x1,
-          s.x2,
-          s.progress,
-          u
-        );
-        s.progressWidth = p, s.progressX = v;
-      }
+      const h = ur(a, n, r);
+      s.x2 = h, f = s.x2 !== r.x2, f && (g ? s.start = je(
+        h,
+        r.x2,
+        r.start,
+        n,
+        o
+      ) : s.end = je(
+        h,
+        r.x2,
+        r.end,
+        n,
+        o
+      ));
       break;
     }
     case "move": {
-      const [g, p] = hr(
-        o - c,
+      const [h, p] = dr(
+        a - c,
         n,
         r
       );
-      if (f = g !== r.x1, f) {
-        s.start = we(
-          g,
-          r.x1,
-          r.start,
-          n,
-          a
-        ), s.end = we(
-          p,
-          r.x2,
-          r.end,
-          n,
-          a
-        ), s.x1 = g, s.x2 = p;
-        const [v, b] = he(
-          s.x1,
-          s.x2,
-          s.progress,
-          u
-        );
-        s.progressWidth = v, s.progressX = b;
-      }
+      f = h !== r.x1, f && (s.start = je(
+        h,
+        r.x1,
+        r.start,
+        n,
+        o
+      ), s.end = je(
+        p,
+        r.x2,
+        r.end,
+        n,
+        o
+      ), s.x1 = h, s.x2 = p);
       break;
     }
   }
   return { isChanged: f, changedTask: s };
-}, pr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, hr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  convertToBar: st,
-  convertToBarTask: ot,
+  convertToBar: ot,
+  convertToBarTask: at,
   convertToBarTasks: nt,
-  convertToProject: at,
-  getProgressPoint: Dt,
+  convertToProject: st,
+  getProgressPoint: Rt,
   handleTaskBySVGMouseEvent: He,
-  progressByProgressWidth: Rt,
-  progressWithByParams: he
+  progressByProgressWidth: kt,
+  progressWithByParams: St
 }, Symbol.toStringTag, { value: "Module" }));
-var A = /* @__PURE__ */ ((o) => (o.QuarterDay = "Quarter Day", o.HalfDay = "Half Day", o.Day = "Day", o.Week = "Week", o.Month = "Month", o))(A || {});
-const yr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+var A = /* @__PURE__ */ ((a) => (a.QuarterDay = "Quarter Day", a.HalfDay = "Half Day", a.Day = "Day", a.Week = "Week", a.Month = "Month", a))(A || {});
+const gr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   ViewMode: A
-}, Symbol.toStringTag, { value: "Module" })), _t = {}, Ve = (o, e = {}) => {
-  const r = JSON.stringify([o, e]);
-  let n = _t[r];
-  return n || (n = new Intl.DateTimeFormat(o, e), _t[r] = n), n;
-}, U = (o, e, r) => new Date(
-  o.getFullYear() + (r === "year" ? e : 0),
-  o.getMonth() + (r === "month" ? e : 0),
-  o.getDate() + (r === "day" ? e : 0),
-  o.getHours() + (r === "hour" ? e : 0),
-  o.getMinutes() + (r === "minute" ? e : 0),
-  o.getSeconds() + (r === "second" ? e : 0),
-  o.getMilliseconds() + (r === "millisecond" ? e : 0)
-), ne = (o, e) => {
+}, Symbol.toStringTag, { value: "Module" })), Tt = {}, Be = (a, e = {}) => {
+  const r = JSON.stringify([a, e]);
+  let n = Tt[r];
+  return n || (n = new Intl.DateTimeFormat(a, e), Tt[r] = n), n;
+}, U = (a, e, r) => new Date(
+  a.getFullYear() + (r === "year" ? e : 0),
+  a.getMonth() + (r === "month" ? e : 0),
+  a.getDate() + (r === "day" ? e : 0),
+  a.getHours() + (r === "hour" ? e : 0),
+  a.getMinutes() + (r === "minute" ? e : 0),
+  a.getSeconds() + (r === "second" ? e : 0),
+  a.getMilliseconds() + (r === "millisecond" ? e : 0)
+), oe = (a, e) => {
   const r = [
     "millisecond",
     "second",
@@ -965,43 +898,43 @@ const yr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
     "month",
     "year"
   ], n = (c) => {
-    const u = r.indexOf(e);
-    return r.indexOf(c) <= u;
+    const g = r.indexOf(e);
+    return r.indexOf(c) <= g;
   };
   return new Date(
-    o.getFullYear(),
-    n("year") ? 0 : o.getMonth(),
-    n("month") ? 1 : o.getDate(),
-    n("day") ? 0 : o.getHours(),
-    n("hour") ? 0 : o.getMinutes(),
-    n("minute") ? 0 : o.getSeconds(),
-    n("second") ? 0 : o.getMilliseconds()
+    a.getFullYear(),
+    n("year") ? 0 : a.getMonth(),
+    n("month") ? 1 : a.getDate(),
+    n("day") ? 0 : a.getHours(),
+    n("hour") ? 0 : a.getMinutes(),
+    n("minute") ? 0 : a.getSeconds(),
+    n("second") ? 0 : a.getMilliseconds()
   );
-}, Xe = (o, e = A.Day) => {
-  let r = o[0].start, n = o[0].start;
-  for (const a of o)
-    a.start < r && (r = a.start), a.end > n && (n = a.end);
+}, $e = (a, e = A.Day) => {
+  let r = a[0].start, n = a[0].start;
+  for (const o of a)
+    o.start < r && (r = o.start), o.end > n && (n = o.end);
   switch (e) {
     case A.Month:
-      r = U(r, -1, "month"), r = ne(r, "month"), n = U(n, 1, "year"), n = ne(n, "year");
+      r = U(r, -1, "month"), r = oe(r, "month"), n = U(n, 1, "year"), n = oe(n, "year");
       break;
     case A.Week:
-      r = ne(r, "day"), n = ne(n, "day"), r = U(mr(r), -7, "day"), n = U(n, 1.5, "month");
+      r = oe(r, "day"), n = oe(n, "day"), r = U(pr(r), -7, "day"), n = U(n, 1.5, "month");
       break;
     case A.Day:
-      r = ne(r, "day"), n = ne(n, "day"), r = U(r, -1, "day"), n = U(n, 19, "day");
+      r = oe(r, "day"), n = oe(n, "day"), r = U(r, -1, "day"), n = U(n, 19, "day");
       break;
     case A.QuarterDay:
-      r = ne(r, "day"), n = ne(n, "day"), r = U(r, -1, "day"), n = U(n, 66, "hour");
+      r = oe(r, "day"), n = oe(n, "day"), r = U(r, -1, "day"), n = U(n, 66, "hour");
       break;
     case A.HalfDay:
-      r = ne(r, "day"), n = ne(n, "day"), r = U(r, -1, "day"), n = U(n, 108, "hour");
+      r = oe(r, "day"), n = oe(n, "day"), r = U(r, -1, "day"), n = U(n, 108, "hour");
       break;
   }
   return [r, n];
-}, Be = (o, e, r = A.Day) => {
-  let n = new Date(o);
-  const a = [n];
+}, Ve = (a, e, r = A.Day) => {
+  let n = new Date(a);
+  const o = [n];
   for (; n < e; ) {
     switch (r) {
       case A.Month:
@@ -1020,234 +953,234 @@ const yr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
         n = U(n, 6, "hour");
         break;
     }
-    a.push(n);
+    o.push(n);
   }
-  return a;
-}, Re = (o, e) => {
-  let r = Ve(e, {
+  return o;
+}, we = (a, e) => {
+  let r = Be(e, {
     month: "long"
-  }).format(o);
+  }).format(a);
   return r = r.replace(
     r[0],
     r[0].toLocaleUpperCase()
   ), r;
-}, mr = (o) => {
-  const e = o.getDay(), r = o.getDate() - e + (e === 0 ? -6 : 1);
-  return new Date(o.setDate(r));
-}, it = (o) => {
-  const e = new Date(o.valueOf()), r = (e.getDay() + 6) % 7;
+}, pr = (a) => {
+  const e = a.getDay(), r = a.getDate() - e + (e === 0 ? -6 : 1);
+  return new Date(a.setDate(r));
+}, it = (a) => {
+  const e = new Date(a.valueOf()), r = (e.getDay() + 6) % 7;
   e.setDate(e.getDate() - r + 3);
   const n = e.valueOf();
   e.setMonth(0, 1), e.getDay() !== 4 && e.setMonth(0, 1 + (4 - e.getDay() + 7) % 7);
-  const a = (1 + Math.ceil((n - e.valueOf()) / 6048e5)).toString();
-  return a.length === 1 ? `0${a}` : a;
-}, lt = (o, e) => new Date(e, o + 1, 0).getDate(), xr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  const o = (1 + Math.ceil((n - e.valueOf()) / 6048e5)).toString();
+  return o.length === 1 ? `0${o}` : o;
+}, lt = (a, e) => new Date(e, a + 1, 0).getDate(), yr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   addToDate: U,
-  ganttDateRange: Xe,
-  getCachedDateTimeFormat: Ve,
+  ganttDateRange: $e,
+  getCachedDateTimeFormat: Be,
   getDaysInMonth: lt,
-  getLocaleMonth: Re,
+  getLocaleMonth: we,
   getWeekNumberISO8601: it,
-  seedDates: Be,
-  startOfDate: ne
+  seedDates: Ve,
+  startOfDate: oe
 }, Symbol.toStringTag, { value: "Module" }));
-function ct(o) {
-  return o.key !== void 0;
+function ct(a) {
+  return a.key !== void 0;
 }
-function Et(o) {
-  return o.clientX !== void 0;
+function Dt(a) {
+  return a.clientX !== void 0;
 }
-function kt(o) {
-  return o.x1 !== void 0;
+function Et(a) {
+  return a.x1 !== void 0;
 }
-function ut(o) {
-  const e = o.filter((r) => !(r.expanded === !1 && r.type === "project"));
+function ut(a) {
+  const e = a.filter((r) => !(r.expanded === !1 && r.type === "project"));
   if (e.length > 0)
     for (let r = 0; e.length > r; r++) {
-      const n = e[r], a = Ct(o, n);
-      o = o.filter((c) => a.indexOf(c) === -1);
+      const n = e[r], o = Ct(a, n);
+      a = a.filter((c) => o.indexOf(c) === -1);
     }
-  return o;
+  return a;
 }
-function Ct(o, e) {
+function Ct(a, e) {
   let r = [];
-  e.type === "project" && (r = o.filter((a) => a.project && a.project === e.id));
+  e.type === "project" && (r = a.filter((o) => o.project && o.project === e.id));
   const n = r.reduce(
-    (a, c) => a.concat(a, Ct(o, c)),
+    (o, c) => o.concat(o, Ct(a, c)),
     []
   );
   return r = r.concat(r, n), r;
 }
-const vr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const mr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  isBarTask: kt,
+  isBarTask: Et,
   isKeyboardEvent: ct,
-  isMouseEvent: Et,
+  isMouseEvent: Dt,
   removeHiddenTasks: ut
 }, Symbol.toStringTag, { value: "Module" }));
-function De(...o) {
-  return o.filter((e) => e).join(" ") || void 0;
+function ye(...a) {
+  return a.filter((e) => e).join(" ") || void 0;
 }
-const br = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const vr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  cn: De
-}, Symbol.toStringTag, { value: "Module" })), Er = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  cn: ye
+}, Symbol.toStringTag, { value: "Module" })), kr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   addToDate: U,
-  barHelper: pr,
-  classNameHelper: br,
-  cn: De,
-  convertToBar: st,
-  convertToBarTask: ot,
+  barHelper: hr,
+  classNameHelper: vr,
+  cn: ye,
+  convertToBar: ot,
+  convertToBarTask: at,
   convertToBarTasks: nt,
-  convertToProject: at,
-  dateHelper: xr,
-  ganttDateRange: Xe,
-  getCachedDateTimeFormat: Ve,
+  convertToProject: st,
+  dateHelper: yr,
+  ganttDateRange: $e,
+  getCachedDateTimeFormat: Be,
   getDaysInMonth: lt,
-  getLocaleMonth: Re,
-  getProgressPoint: Dt,
+  getLocaleMonth: we,
+  getProgressPoint: Rt,
   getWeekNumberISO8601: it,
   handleTaskBySVGMouseEvent: He,
-  isBarTask: kt,
+  isBarTask: Et,
   isKeyboardEvent: ct,
-  isMouseEvent: Et,
-  otherHelper: vr,
-  progressByProgressWidth: Rt,
-  progressWithByParams: he,
+  isMouseEvent: Dt,
+  otherHelper: mr,
+  progressByProgressWidth: kt,
+  progressWithByParams: St,
   removeHiddenTasks: ut,
-  seedDates: Be,
-  startOfDate: ne
+  seedDates: Ve,
+  startOfDate: oe
 }, Symbol.toStringTag, { value: "Module" })), Ot = ({
-  task: o,
+  task: a,
   rtl: e,
   children: r,
   scrollX: n,
-  scrollY: a,
+  scrollY: o,
   svgContainerHeight: c,
-  svgContainerWidth: u,
+  svgContainerWidth: g,
   headerHeight: s,
   rowHeight: f,
-  taskListWidth: g,
+  taskListWidth: h,
   multiBarRowMode: p = !1
 }) => {
-  const [v, b] = V(0), [T, y] = V(0), E = le(null), w = T !== 0 && v !== 0;
-  return z(() => {
-    if (E.current) {
-      const _ = E.current.offsetHeight * 1.1, h = E.current.offsetWidth * 1.1;
-      let m = (p === !0 && typeof o.line < "u" ? o.line : o.index) * f - a + s, S;
+  const [y, R] = V(0), [m, v] = V(0), j = le(null), C = m !== 0 && y !== 0;
+  return X(() => {
+    if (j.current) {
+      const b = j.current.offsetHeight * 1.1, u = j.current.offsetWidth * 1.1;
+      let _ = (p === !0 && typeof a.line < "u" ? a.line : a.index) * f - o + s, w;
       if (e)
-        S = o.x1 - h - n, S < 0 && (S = o.x2 - n), h + S > u && (S = u - h, m += f);
+        w = a.x1 - u - n, w < 0 && (w = a.x2 - n), u + w > g && (w = g - u, _ += f);
       else {
-        S = o.x2 + g - n;
-        const O = h + S, ge = g + u;
-        O > ge && (S = o.x1 + g - n - h), S < g && (S = u + g - h, m += f);
+        w = a.x2 + h - n;
+        const I = u + w, q = h + g;
+        I > q && (w = a.x1 + h - n - u), w < h && (w = g + h - u, _ += f);
       }
-      _ + m - a > c - a && (m = c - _), b(m), y(S);
+      b + _ - o > c - o && (_ = c - b), R(_), v(w + 50);
     }
   }, [
-    o,
-    n,
     a,
+    n,
+    o,
     s,
-    g,
+    h,
     f,
     c,
-    u,
+    g,
     e,
     p
   ]), /* @__PURE__ */ l.jsx(
     "div",
     {
-      ref: E,
-      className: De("tooltip-wrap", w ? "visible" : "hidden"),
+      ref: j,
+      className: ye("tooltip-wrap", C ? "visible" : "hidden"),
       style: {
-        left: T,
-        top: v
+        left: m,
+        top: y
       },
       children: r
     }
   );
-}, Pt = ({ task: o }) => /* @__PURE__ */ l.jsxs("div", { className: "tootip-content", children: [
-  /* @__PURE__ */ l.jsx("b", { className: "dates-range", children: `${o.name}: ${o.start.getFullYear()}-${o.start.getMonth() + 1}-${o.start.getDate()} ~ ${o.end.getFullYear()}-${o.end.getMonth() + 1}-${o.end.getDate()}` }),
-  o.end.getTime() - o.start.getTime() !== 0 && /* @__PURE__ */ l.jsx("p", { className: "duration", children: `기간: ${~~((o.end.getTime() - o.start.getTime()) / (1e3 * 60 * 60 * 24))} 일` })
+}, Pt = ({ task: a }) => /* @__PURE__ */ l.jsxs("div", { className: "tootip-content", children: [
+  /* @__PURE__ */ l.jsx("b", { className: "dates-range", children: `${a.name}: ${a.start.getFullYear()}-${a.start.getMonth() + 1}-${a.start.getDate()} ~ ${a.end.getFullYear()}-${a.end.getMonth() + 1}-${a.end.getDate()}` }),
+  a.end.getTime() - a.start.getTime() !== 0 && /* @__PURE__ */ l.jsx("p", { className: "duration", children: `기간: ${~~((a.end.getTime() - a.start.getTime()) / (1e3 * 60 * 60 * 24))} 일` })
 ] }), Mt = ({
-  scroll: o,
+  scroll: a,
   rootStyle: e,
   bodyStyle: r,
   onScroll: n
 }) => {
-  const a = le(null);
-  return z(() => {
-    a.current && (a.current.scrollTop = o);
-  }, [o]), /* @__PURE__ */ l.jsx(
+  const o = le(null);
+  return X(() => {
+    o.current && (o.current.scrollTop = a);
+  }, [a]), /* @__PURE__ */ l.jsx(
     "div",
     {
-      ref: a,
+      ref: o,
       className: "vertical-scroll-root",
       style: e,
       onScroll: n,
       children: /* @__PURE__ */ l.jsx("div", { className: "vertical-scroll-body", style: r })
     }
   );
-}, kr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, Rr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  HorizontalScroll: jt,
+  HorizontalScroll: _t,
   Tooltip: Ot,
   TooltipContent: Pt,
   VerticalScroll: Mt
-}, Symbol.toStringTag, { value: "Module" })), Lt = (o) => {
+}, Symbol.toStringTag, { value: "Module" })), Lt = (a) => {
   const {
     className: e,
     isDateChangeable: r,
     // style
     rootStyle: n,
     // components
-    barDisplay: a,
+    barDisplay: o,
     leftBarDateHandle: c,
-    rightBarDateHandle: u,
+    rightBarDateHandle: g,
     // handlers
     onMouseEnter: s,
     onMouseLeave: f
-  } = o;
+  } = a;
   return /* @__PURE__ */ l.jsxs(
     "g",
     {
-      className: De("bar", e),
+      className: ye("bar", e),
       style: n,
       tabIndex: 0,
       onMouseEnter: s,
       onMouseLeave: f,
       children: [
-        a,
+        o,
         /* @__PURE__ */ l.jsx("g", { children: r === !0 && // DATE HANDLES
         /* @__PURE__ */ l.jsxs("g", { children: [
           c && c,
-          u && u
+          g && g
         ] }) })
       ]
     }
   );
 }, dt = ({
-  x: o = 0,
+  x: a = 0,
   y: e = 0,
   barCornerRadius: r = 5,
   rootStyle: n,
-  barStyle: a,
+  barStyle: o,
   onMouseDown: c
 }) => /* @__PURE__ */ l.jsx("g", { className: "bar-display-root", onMouseDown: c, style: n, children: /* @__PURE__ */ l.jsx(
   "rect",
   {
     className: "bar-display-bar",
-    style: a,
-    x: o,
+    style: o,
+    x: a,
     y: e,
     rx: r,
     ry: r
   }
-) }), Wt = (o) => {
-  const { rootStyle: e, task: r, isDateChangeable: n, onEventStart: a } = o;
+) }), Nt = (a) => {
+  const { rootStyle: e, task: r, isDateChangeable: n, onEventStart: o } = a;
   return /* @__PURE__ */ l.jsx("g", { className: "bar", tabIndex: 0, style: e, children: /* @__PURE__ */ l.jsx(
     dt,
     {
@@ -1255,7 +1188,7 @@ const br = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
       y: r.y,
       barCornerRadius: r.barCornerRadius,
       onMouseDown: (c) => {
-        n === !0 && a("move", r, c);
+        n === !0 && o("move", r, c);
       },
       rootStyle: {
         height: r.height
@@ -1267,12 +1200,12 @@ const br = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
       }
     }
   ) });
-}, Nt = (o) => {
+}, Ft = (a) => {
   const {
     task: e,
     rootStyle: r,
     backgroundStyle: n
-  } = o;
+  } = a;
   return /* @__PURE__ */ l.jsx("svg", { children: /* @__PURE__ */ l.jsx("g", { tabIndex: 0, className: "project-root", style: r, children: /* @__PURE__ */ l.jsx(
     "rect",
     {
@@ -1287,33 +1220,33 @@ const br = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
     }
   ) }) });
 }, tt = ({
-  x: o = 0,
+  x: a = 0,
   y: e = 0,
   width: r = 10,
   height: n = 30,
-  barCornerRadius: a = 5,
+  barCornerRadius: o = 5,
   onMouseDown: c
 }) => /* @__PURE__ */ l.jsx(
   "rect",
   {
     className: "bar-date-handle",
-    x: o,
+    x: a,
     y: e,
     width: r,
     height: n,
-    ry: a,
-    rx: a,
+    ry: o,
+    rx: o,
     onMouseDown: c
   }
-), Ft = (o) => {
-  const { task: e, rtl: r, isDateChangeable: n, backgroundColor: a, onEventStart: c } = o, [u, s] = V(!1), f = /* @__PURE__ */ l.jsx(
+), Wt = (a) => {
+  const { task: e, rtl: r, isDateChangeable: n, backgroundColor: o, onEventStart: c } = a, [g, s] = V(!1), f = /* @__PURE__ */ l.jsx(
     dt,
     {
       x: e.x1,
       y: e.y,
       barCornerRadius: e.barCornerRadius,
-      onMouseDown: (v) => {
-        n === !0 && c("move", e, v);
+      onMouseDown: (y) => {
+        n === !0 && c("move", e, y);
       },
       rootStyle: {
         height: e.height
@@ -1321,10 +1254,10 @@ const br = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
       barStyle: {
         height: e.height,
         width: e.x2 - e.x1,
-        fill: a
+        fill: o
       }
     }
-  ), g = /* @__PURE__ */ l.jsx(
+  ), h = /* @__PURE__ */ l.jsx(
     tt,
     {
       x: e.x1 + 1,
@@ -1332,7 +1265,7 @@ const br = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
       width: e.handleWidth,
       height: e.height - 2,
       barCornerRadius: e.barCornerRadius,
-      onMouseDown: (v) => c("start", e, v)
+      onMouseDown: (y) => c("start", e, y)
     }
   ), p = /* @__PURE__ */ l.jsx(
     tt,
@@ -1342,35 +1275,35 @@ const br = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
       height: e.height - 2,
       width: e.handleWidth,
       barCornerRadius: e.barCornerRadius,
-      onMouseDown: (v) => c("end", e, v)
+      onMouseDown: (y) => c("end", e, y)
     }
   );
   return /* @__PURE__ */ l.jsx("svg", { style: { overflow: "visible" }, className: "original", children: /* @__PURE__ */ l.jsx(
     Lt,
     {
       rtl: r,
-      className: u ? "hovered" : "",
+      className: g ? "hovered" : "",
       isDateChangeable: n,
       barDisplay: f,
-      leftBarDateHandle: g,
+      leftBarDateHandle: h,
       rightBarDateHandle: p,
       onMouseEnter: () => s(() => !0),
       onMouseLeave: () => s(() => !1)
     }
   ) });
-}, Me = (o) => {
+}, Le = (a) => {
   const {
     value: e,
     x1Line: r,
     xText: n,
-    y1Line: a,
+    y1Line: o,
     y2Line: c,
-    yText: u,
+    yText: g,
     // styles
     rootStyle: s,
     lineStyle: f,
-    textStyle: g
-  } = o;
+    textStyle: h
+  } = a;
   return /* @__PURE__ */ l.jsxs("g", { style: s, className: "calendar__header-root", children: [
     /* @__PURE__ */ l.jsx(
       "line",
@@ -1378,183 +1311,183 @@ const br = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
         className: "calendar__header-line",
         style: f,
         x1: r,
-        y1: a,
+        y1: o,
         x2: r,
         y2: c
       },
       e + "line"
     ),
-    /* @__PURE__ */ l.jsx("text", { className: "calendar__header-text", style: g, y: u, x: n, children: e }, e + "text")
+    /* @__PURE__ */ l.jsx("text", { className: "calendar__header-text", style: h, y: g, x: n, children: e }, e + "text")
   ] });
-}, It = (o) => {
+}, It = (a) => {
   const {
     columnWidth: e,
     dateSetup: r,
     headerHeight: n,
-    locale: a,
+    locale: o,
     rtl: c,
     // styles
-    rootStyle: u,
+    rootStyle: g,
     headerStyle: s,
     bottomTextStyle: f
-  } = o, g = () => {
-    const E = [], w = [], _ = n * 0.5;
-    for (let h = 0; h < r.dates.length; h++) {
-      const j = r.dates[h], m = Re(j, a);
-      if (w.push(
+  } = a, h = () => {
+    const j = [], C = [], b = n * 0.5;
+    for (let u = 0; u < r.dates.length; u++) {
+      const T = r.dates[u], _ = we(T, o);
+      if (C.push(
         /* @__PURE__ */ l.jsx(
           "text",
           {
             style: f,
             y: n * 0.8,
-            x: e * h + e * 0.5,
-            children: m
+            x: e * u + e * 0.5,
+            children: _
           },
-          m + j.getFullYear()
+          _ + T.getFullYear()
         )
-      ), h === 0 || j.getFullYear() !== r.dates[h - 1].getFullYear()) {
-        const S = j.getFullYear().toString();
-        let H;
-        c ? H = (6 + h + j.getMonth() + 1) * e : H = (6 + h - j.getMonth()) * e, E.push(
+      ), u === 0 || T.getFullYear() !== r.dates[u - 1].getFullYear()) {
+        const w = T.getFullYear().toString();
+        let W;
+        c ? W = (6 + u + T.getMonth() + 1) * e : W = (6 + u - T.getMonth()) * e, j.push(
           /* @__PURE__ */ l.jsx(
-            Me,
+            Le,
             {
-              value: S,
-              x1Line: e * h,
+              value: w,
+              x1Line: e * u,
               y1Line: 0,
               y2Line: n,
-              xText: H,
-              yText: _ * 0.9
+              xText: W,
+              yText: b * 0.9
             },
-            S
+            w
           )
         );
       }
     }
-    return [E, w];
+    return [j, C];
   }, p = () => {
-    const E = [], w = [];
-    let _ = 1;
-    const h = n * 0.5, j = r.dates;
-    for (let m = j.length - 1; m >= 0; m--) {
-      const S = j[m];
-      let H = "";
-      (m === 0 || S.getMonth() !== j[m - 1].getMonth()) && (H = `${Re(S, a)}, ${S.getFullYear()}`);
-      const O = `W${it(S)}`;
-      w.push(
+    const j = [], C = [];
+    let b = 1;
+    const u = n * 0.5, T = r.dates;
+    for (let _ = T.length - 1; _ >= 0; _--) {
+      const w = T[_];
+      let W = "";
+      (_ === 0 || w.getMonth() !== T[_ - 1].getMonth()) && (W = `${we(w, o)}, ${w.getFullYear()}`);
+      const I = `W${it(w)}`;
+      C.push(
         /* @__PURE__ */ l.jsx(
           "text",
           {
             style: f,
             y: n * 0.8,
-            x: e * (m + +c),
-            children: O
+            x: e * (_ + +c),
+            children: I
           },
-          S.getTime()
+          w.getTime()
         )
-      ), H && (m !== j.length - 1 && E.push(
+      ), W && (_ !== T.length - 1 && j.push(
         /* @__PURE__ */ l.jsx(
-          Me,
+          Le,
           {
-            value: H,
-            x1Line: e * m + _ * e,
+            value: W,
+            x1Line: e * _ + b * e,
             y1Line: 0,
             y2Line: n,
-            xText: e * m + e * _ * 0.5,
-            yText: h * 0.9
+            xText: e * _ + e * b * 0.5,
+            yText: u * 0.9
           },
-          H
+          W
         )
-      ), _ = 0), _++;
+      ), b = 0), b++;
     }
-    return [E, w];
-  }, v = () => {
-    const E = [], w = [], _ = n * 0.5, h = r.dates;
-    for (let j = 0; j < h.length; j++) {
-      const m = h[j], S = m.getDate().toString();
-      if (w.push(
+    return [j, C];
+  }, y = () => {
+    const j = [], C = [], b = n * 0.5, u = r.dates;
+    for (let T = 0; T < u.length; T++) {
+      const _ = u[T], w = _.getDate().toString();
+      if (C.push(
         /* @__PURE__ */ l.jsx(
           "text",
           {
             style: f,
             y: n * 0.8,
-            x: e * j + e * 0.5,
-            children: S
+            x: e * T + e * 0.5,
+            children: w
           },
-          m.getTime()
+          _.getTime()
         )
-      ), j + 1 !== h.length && m.getMonth() !== h[j + 1].getMonth()) {
-        const H = Re(m, a);
-        E.push(
+      ), T + 1 !== u.length && _.getMonth() !== u[T + 1].getMonth()) {
+        const W = we(_, o);
+        j.push(
           /* @__PURE__ */ l.jsx(
-            Me,
+            Le,
             {
-              value: H,
-              x1Line: e * (j + 1),
+              value: W,
+              x1Line: e * (T + 1),
               y1Line: 0,
               y2Line: n,
-              xText: e * (j + 1) - lt(m.getMonth(), m.getFullYear()) * e * 0.5,
-              yText: _ * 0.9
+              xText: e * (T + 1) - lt(_.getMonth(), _.getFullYear()) * e * 0.5,
+              yText: b * 0.9
             },
-            H + m.getFullYear()
+            W + _.getFullYear()
           )
         );
       }
     }
-    return [E, w];
-  }, b = () => {
-    const E = [], w = [], _ = r.viewMode === A.HalfDay ? 2 : 4, h = n * 0.5, j = r.dates;
-    for (let m = 0; m < j.length; m++) {
-      const S = j[m], H = Ve(a, {
+    return [j, C];
+  }, R = () => {
+    const j = [], C = [], b = r.viewMode === A.HalfDay ? 2 : 4, u = n * 0.5, T = r.dates;
+    for (let _ = 0; _ < T.length; _++) {
+      const w = T[_], W = Be(o, {
         hour: "numeric"
-      }).format(S);
-      if (w.push(
+      }).format(w);
+      if (C.push(
         /* @__PURE__ */ l.jsx(
           "text",
           {
             style: f,
             y: n * 0.8,
-            x: e * (m + +c),
-            children: H
+            x: e * (_ + +c),
+            children: W
           },
-          S.getTime()
+          w.getTime()
         )
-      ), m === 0 || S.getDate() !== j[m - 1].getDate()) {
-        const O = `${S.getDate()} ${Re(S, a)}`;
-        E.push(
+      ), _ === 0 || w.getDate() !== T[_ - 1].getDate()) {
+        const I = `${w.getDate()} ${we(w, o)}`;
+        j.push(
           /* @__PURE__ */ l.jsx(
-            Me,
+            Le,
             {
-              value: O,
-              x1Line: e * m + _ * e,
+              value: I,
+              x1Line: e * _ + b * e,
               y1Line: 0,
               y2Line: n,
-              xText: e * m + _ * e * 0.5,
-              yText: h * 0.9
+              xText: e * _ + b * e * 0.5,
+              yText: u * 0.9
             },
-            O + S.getFullYear()
+            I + w.getFullYear()
           )
         );
       }
     }
-    return [E, w];
+    return [j, C];
   };
-  let T = [], y = [];
+  let m = [], v = [];
   switch (r.viewMode) {
     case A.Month:
-      [T, y] = g();
+      [m, v] = h();
       break;
     case A.Week:
-      [T, y] = p();
+      [m, v] = p();
       break;
     case A.Day:
-      [T, y] = v();
+      [m, v] = y();
       break;
     default:
-      [T, y] = b();
+      [m, v] = R();
       break;
   }
-  return /* @__PURE__ */ l.jsx("svg", { style: { overflow: "visible" }, children: /* @__PURE__ */ l.jsxs("g", { style: u, className: "calendar-root", children: [
+  return /* @__PURE__ */ l.jsx("svg", { style: { overflow: "visible" }, children: /* @__PURE__ */ l.jsxs("g", { style: g, className: "calendar-root", children: [
     /* @__PURE__ */ l.jsx(
       "rect",
       {
@@ -1566,132 +1499,132 @@ const br = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
         height: n
       }
     ),
-    T,
-    y
+    m,
+    v
   ] }) });
-}, Ht = (o) => {
+}, Ht = (a) => {
   const {
     tasks: e,
     dates: r,
     rtl: n,
-    rowHeight: a,
+    rowHeight: o,
     columnWidth: c,
-    svgWidth: u,
+    svgWidth: g,
     todayColor: s,
     // style
     gridRowStyle: f,
-    gridRowLineStyle: g,
+    gridRowLineStyle: h,
     gridTickStyle: p
-  } = o, v = /* @__PURE__ */ new Date();
-  let b = 0, T = 0;
-  const y = [], E = [
+  } = a, y = /* @__PURE__ */ new Date();
+  let R = 0, m = 0;
+  const v = [], j = [
     /* @__PURE__ */ l.jsx(
       "line",
       {
-        style: g,
+        style: h,
         x: "0",
         y1: 0,
-        x2: u,
+        x2: g,
         y2: 0
       },
       "RowLineFirst"
     )
   ];
-  for (const h of e)
-    y.push(
+  for (const u of e)
+    v.push(
       /* @__PURE__ */ l.jsx(
         "rect",
         {
           className: "grid-row",
           style: f,
           x: "0",
-          y: b,
-          width: u,
-          height: a
+          y: R,
+          width: g,
+          height: o
         },
-        "Row" + h.id
+        "Row" + u.id
       )
-    ), E.push(
+    ), j.push(
       /* @__PURE__ */ l.jsx(
         "line",
         {
           className: "grid-row__line",
-          style: g,
+          style: h,
           x: "0",
-          y1: b + a,
-          x2: u,
-          y2: b + a
+          y1: R + o,
+          x2: g,
+          y2: R + o
         },
-        "RowLine" + h.id
+        "RowLine" + u.id
       )
-    ), b += a;
-  const w = [];
-  let _ = /* @__PURE__ */ l.jsx("rect", {});
-  for (let h = 0; h < r.length; h++) {
-    const j = r[h];
-    w.push(
+    ), R += o;
+  const C = [];
+  let b = /* @__PURE__ */ l.jsx("rect", {});
+  for (let u = 0; u < r.length; u++) {
+    const T = r[u];
+    C.push(
       /* @__PURE__ */ l.jsx(
         "line",
         {
           className: "grid-tick",
           style: p,
-          x1: T,
+          x1: m,
           y1: 0,
-          x2: T,
-          y2: b
+          x2: m,
+          y2: R
         },
-        j.getTime()
+        T.getTime()
       )
-    ), (h + 1 !== r.length && j.getTime() < v.getTime() && r[h + 1].getTime() >= v.getTime() || // if current date is last
-    h !== 0 && h + 1 === r.length && j.getTime() < v.getTime() && U(
-      j,
-      j.getTime() - r[h - 1].getTime(),
+    ), (u + 1 !== r.length && T.getTime() < y.getTime() && r[u + 1].getTime() >= y.getTime() || // if current date is last
+    u !== 0 && u + 1 === r.length && T.getTime() < y.getTime() && U(
+      T,
+      T.getTime() - r[u - 1].getTime(),
       "millisecond"
-    ).getTime() >= v.getTime()) && (_ = /* @__PURE__ */ l.jsx(
+    ).getTime() >= y.getTime()) && (b = /* @__PURE__ */ l.jsx(
       "rect",
       {
-        x: T,
+        x: m,
         y: 0,
         width: c,
-        height: b,
+        height: R,
         fill: s
       }
-    )), n && h + 1 !== r.length && j.getTime() >= v.getTime() && r[h + 1].getTime() < v.getTime() && (_ = /* @__PURE__ */ l.jsx(
+    )), n && u + 1 !== r.length && T.getTime() >= y.getTime() && r[u + 1].getTime() < y.getTime() && (b = /* @__PURE__ */ l.jsx(
       "rect",
       {
-        x: T + c,
+        x: m + c,
         y: 0,
         width: c,
-        height: b,
+        height: R,
         fill: s
       }
-    )), T += c;
+    )), m += c;
   }
   return /* @__PURE__ */ l.jsx("svg", { style: { overflow: "visible" }, children: /* @__PURE__ */ l.jsxs("g", { children: [
-    /* @__PURE__ */ l.jsx("g", { children: y }),
-    /* @__PURE__ */ l.jsx("g", { children: E }),
-    /* @__PURE__ */ l.jsx("g", { children: w }),
-    /* @__PURE__ */ l.jsx("g", { children: _ })
+    /* @__PURE__ */ l.jsx("g", { children: v }),
+    /* @__PURE__ */ l.jsx("g", { children: j }),
+    /* @__PURE__ */ l.jsx("g", { children: C }),
+    /* @__PURE__ */ l.jsx("g", { children: b })
   ] }) });
-}, Xt = (o) => {
+}, $t = (a) => {
   const {
     task: e,
     rtl: r,
     isDateChangeable: n,
-    isDelete: a,
+    isDelete: o,
     isSelected: c,
-    taskHeight: u,
+    taskHeight: g,
     onEventStart: s
-  } = o, [f, g] = V(/* @__PURE__ */ l.jsx("div", {})), [p, v] = V(!0), b = le(null), T = () => {
-    const y = e.x2 - e.x1;
-    return p ? e.x1 + y * 0.5 : r && b.current ? e.x1 - b.current.getBBox().width : e.x1 + y + 10;
+  } = a, [f, h] = V(/* @__PURE__ */ l.jsx("div", {})), [p, y] = V(!0), R = le(null), m = () => {
+    const v = e.x2 - e.x1;
+    return p ? e.x1 + v * 0.5 : r && R.current ? e.x1 - R.current.getBBox().width : e.x1 + v + 10;
   };
-  return z(() => {
+  return X(() => {
     switch (e.typeInternal) {
       case "project":
-        g(
+        h(
           /* @__PURE__ */ l.jsx(
-            Nt,
+            Ft,
             {
               task: e,
               backgroundStyle: {
@@ -1703,11 +1636,11 @@ const br = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
         );
         break;
       case "smalltask":
-        g(/* @__PURE__ */ l.jsx(Wt, { ...o }));
+        h(/* @__PURE__ */ l.jsx(Nt, { ...a }));
         break;
       default:
-        g(() => /* @__PURE__ */ l.jsx(
-          Ft,
+        h(() => /* @__PURE__ */ l.jsx(
+          Wt,
           {
             task: e,
             rtl: r,
@@ -1718,28 +1651,28 @@ const br = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
         ));
         break;
     }
-  }, [e, c]), z(() => {
-    b.current && v(b.current.getBBox().width < e.x2 - e.x1);
-  }, [b, e]), /* @__PURE__ */ l.jsx("svg", { children: /* @__PURE__ */ l.jsxs(
+  }, [e, c]), X(() => {
+    R.current && y(R.current.getBBox().width < e.x2 - e.x1);
+  }, [R, e]), /* @__PURE__ */ l.jsx("svg", { children: /* @__PURE__ */ l.jsxs(
     "g",
     {
-      onKeyDown: (y) => {
-        switch (y.key) {
+      onKeyDown: (v) => {
+        switch (v.key) {
           case "Delete": {
-            a && s("delete", e, y);
+            o && s("delete", e, v);
             break;
           }
         }
-        y.stopPropagation();
+        v.stopPropagation();
       },
-      onMouseEnter: (y) => {
-        s("mouseenter", e, y);
+      onMouseEnter: (v) => {
+        s("mouseenter", e, v);
       },
-      onMouseLeave: (y) => {
-        s("mouseleave", e, y);
+      onMouseLeave: (v) => {
+        s("mouseleave", e, v);
       },
-      onDoubleClick: (y) => {
-        s("dblclick", e, y);
+      onDoubleClick: (v) => {
+        s("dblclick", e, v);
       },
       onFocus: () => {
         s("select", e);
@@ -1751,298 +1684,334 @@ const br = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
           {
             className: p ? "taskitem-text" : "taskitem-text__outside",
             dominantBaseline: "central",
-            x: T(),
-            y: e.y + u * 0.5,
-            ref: b,
+            x: m(),
+            y: e.y + g * 0.5,
+            ref: R,
             children: e.name
           }
         )
       ]
     }
   ) });
-}, Bt = (o) => {
+}, Vt = (a) => {
   const {
     scrollY: e,
     // components
     TaskListHeader: r,
     TaskListTable: n,
     // components props
-    taskListHeaderProps: a,
+    taskListHeaderProps: o,
     taskListTableProps: c,
     // styles
-    taskListTableWrapperStyles: u,
+    taskListTableWrapperStyles: g,
     // refs
     taskListRef: s
-  } = o, f = le(null);
-  return z(() => {
+  } = a, f = le(null);
+  return X(() => {
     f.current && (f.current.scrollTop = e);
   }, [e]), /* @__PURE__ */ l.jsxs("div", { ref: s, children: [
-    /* @__PURE__ */ l.jsx(r, { ...a }),
-    /* @__PURE__ */ l.jsx("div", { className: "tasklist_wrapper", style: u, ref: f, children: /* @__PURE__ */ l.jsx(n, { ...c }) })
+    /* @__PURE__ */ l.jsx(r, { ...o }),
+    /* @__PURE__ */ l.jsx(
+      "div",
+      {
+        className: "tasklist_wrapper",
+        style: g,
+        ref: f,
+        children: /* @__PURE__ */ l.jsx(n, { ...c })
+      }
+    )
   ] });
-}, Vt = (o) => {
+}, Bt = (a) => {
   const {
-    columns: e = ["Name"],
+    columns: e,
     // style
     rootStyle: r,
     headerStyle: n,
-    columnStyle: a,
+    columnStyle: o,
     columnSeparatorStyle: c
-  } = o, u = [];
+  } = a, g = [];
   return e.forEach((s, f) => {
-    const g = /* @__PURE__ */ l.jsxs(rt.Fragment, { children: [
-      /* @__PURE__ */ l.jsx("div", { className: "tasklist__header-column", style: a, children: s }),
-      f !== e.length - 1 && /* @__PURE__ */ l.jsx("div", { className: "tasklist__header-comumn__sep", style: c })
-    ] }, f);
-    u.push(g);
-  }), // ROOT
-  /* @__PURE__ */ l.jsx("div", { className: "tasklist__header-root", style: r, children: /* @__PURE__ */ l.jsx("div", { className: "tasklist__header-header", style: n, children: u }) });
-}, $t = (o) => {
-  const {
-    tasks: e,
-    expanderSymbolOpen: r = "▼",
-    expanderSymbolClose: n = "▶",
-    expanderSymbolEmpty: a = "",
-    onExpanderClick: c
-  } = o;
-  return (
-    // ROOT
-    /* @__PURE__ */ l.jsx("div", { className: "tasklist__table-root", children: e.map((u) => {
-      let s = a;
-      return u.expanded === !0 ? s = n : u.expanded === !1 && (s = r), // TABLE ROW
+    const h = /* @__PURE__ */ l.jsxs(rt.Fragment, { children: [
       /* @__PURE__ */ l.jsx(
         "div",
         {
-          className: De(
+          className: "tasklist__header-column",
+          style: { ...o, width: `${s.width}px` },
+          children: s.name
+        }
+      ),
+      f !== e.length - 1 && /* @__PURE__ */ l.jsx(
+        "div",
+        {
+          className: "tasklist__header-comumn__sep",
+          style: c
+        }
+      )
+    ] }, f);
+    g.push(h);
+  }), // ROOT
+  /* @__PURE__ */ l.jsx("div", { className: "tasklist__header-root", style: r, children: /* @__PURE__ */ l.jsx("div", { className: "tasklist__header-header", style: n, children: g }) });
+}, Yt = (a) => {
+  const {
+    tasks: e,
+    columns: r,
+    expanderSymbolOpen: n = "▼",
+    expanderSymbolClose: o = "▶",
+    expanderSymbolEmpty: c = "",
+    onExpanderClick: g
+  } = a;
+  return (
+    // ROOT
+    /* @__PURE__ */ l.jsx("div", { className: "tasklist__table-root", children: e.map((s) => {
+      let f = c;
+      return s.expanded === !0 ? f = o : s.expanded === !1 && (f = n), // TABLE ROW
+      /* @__PURE__ */ l.jsx(
+        "div",
+        {
+          className: ye(
             "tasklist__table-row",
-            u.type === "project" ? "project" : "task"
+            s.type === "project" ? "project" : "task"
           ),
-          children: /* @__PURE__ */ l.jsx(
-            "div",
-            {
-              className: De(
-                "tasklist__table-cell",
-                u.type === "project" ? "project" : "task"
-              ),
-              title: u.name,
-              children: /* @__PURE__ */ l.jsxs(
+          children: r.map((h, p) => {
+            var y;
+            return console.log(h.id, s[h.id]), p === 0 ? (
+              // First Column
+              /* @__PURE__ */ l.jsx(
                 "div",
                 {
-                  className: "tasklist__table-cell__wrapper",
-                  onClick: () => c(u),
-                  children: [
-                    /* @__PURE__ */ l.jsx(
-                      "div",
-                      {
-                        className: s ? "tasklist__table-expander" : "tasklist__table-expander__empty",
-                        children: s
-                      }
-                    ),
-                    /* @__PURE__ */ l.jsx("div", { children: u.name })
-                  ]
+                  className: ye(
+                    "tasklist__table-cell",
+                    s.type === "project" ? "project" : "task"
+                  ),
+                  title: s.name,
+                  style: { width: h.width },
+                  children: /* @__PURE__ */ l.jsxs(
+                    "div",
+                    {
+                      className: "tasklist__table-cell__wrapper",
+                      onClick: () => g(s),
+                      children: [
+                        /* @__PURE__ */ l.jsx(
+                          "div",
+                          {
+                            className: f ? "tasklist__table-expander" : "tasklist__table-expander__empty",
+                            children: f
+                          }
+                        ),
+                        /* @__PURE__ */ l.jsx("div", { children: s.name })
+                      ]
+                    }
+                  )
                 }
               )
-            }
-          )
+            ) : /* @__PURE__ */ l.jsx(
+              "div",
+              {
+                className: ye("tasklist__table-cell"),
+                title: h.name,
+                children: /* @__PURE__ */ l.jsx("div", { style: { width: h.width || "150px" }, children: h.cell ? h.cell(s) : ((y = s[h.id]) == null ? void 0 : y.toString()) || "" })
+              }
+            );
+          })
         },
-        `${u.id}row`
+        `${s.id}row`
       );
     }) })
   );
-}, Cr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, Dr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   Bar: Lt,
   BarDateHandle: tt,
   BarDisplay: dt,
-  BarOriginal: Ft,
-  BarSmall: Wt,
+  BarOriginal: Wt,
+  BarSmall: Nt,
   Calendar: It,
-  CalendarHeader: Me,
+  CalendarHeader: Le,
   Grid: Ht,
-  Project: Nt,
-  TaskItem: Xt,
-  TaskList: Bt,
-  TaskListHeader: Vt,
-  TaskListTable: $t
+  Project: Ft,
+  TaskItem: $t,
+  TaskList: Vt,
+  TaskListHeader: Bt,
+  TaskListTable: Yt
+}, Symbol.toStringTag, { value: "Module" })), xr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null
+}, Symbol.toStringTag, { value: "Module" })), br = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null
 }, Symbol.toStringTag, { value: "Module" })), Tr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null
 }, Symbol.toStringTag, { value: "Module" })), _r = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null
-}, Symbol.toStringTag, { value: "Module" })), jr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null
-}, Symbol.toStringTag, { value: "Module" })), Sr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null
-}, Symbol.toStringTag, { value: "Module" })), Or = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, Symbol.toStringTag, { value: "Module" })), Er = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   ViewMode: A,
-  barTask: Tr,
-  custom: _r,
-  dateSetup: jr,
-  ganttTaskActions: Sr,
-  publicTypes: yr
-}, Symbol.toStringTag, { value: "Module" })), wr = (o) => {
-  var ae;
+  barTask: xr,
+  custom: br,
+  dateSetup: Tr,
+  ganttTaskActions: _r,
+  publicTypes: gr
+}, Symbol.toStringTag, { value: "Module" })), jr = (a) => {
+  var he;
   const {
     tasks: e,
     dates: r,
     ganttEvent: n,
-    selectedTask: a,
+    selectedTask: o,
     columnWidth: c,
-    timeStep: u,
+    timeStep: g,
     svg: s,
     taskHeight: f,
-    rtl: g,
+    rtl: h,
     setGanttEvent: p,
-    setFailedTask: v,
-    setSelectedTask: b,
-    onDateChange: T,
-    onProgressChange: y,
-    onDoubleClick: E,
-    onDelete: w
-  } = o, [_, h] = V(0), [j, m] = V(0), [S, H] = V(!1), O = (ae = s == null ? void 0 : s.current) == null ? void 0 : ae.createSVGPoint(), ge = async (W, I, J) => {
-    var M;
-    if (!J)
-      W === "select" && b(I.id);
-    else if (ct(J)) {
-      if (W === "delete" && w)
+    setFailedTask: y,
+    setSelectedTask: R,
+    onDateChange: m,
+    onProgressChange: v,
+    onDoubleClick: j,
+    onDelete: C
+  } = a, [b, u] = V(0), [T, _] = V(0), [w, W] = V(!1), I = (he = s == null ? void 0 : s.current) == null ? void 0 : he.createSVGPoint(), q = async (O, B, z) => {
+    var N;
+    if (!z)
+      O === "select" && R(B.id);
+    else if (ct(z)) {
+      if (O === "delete" && C)
         try {
-          const N = await w(I);
-          N !== void 0 && N && p({ action: W, changedTask: I });
-        } catch (N) {
-          console.error("Error on Delete. " + N);
+          const P = await C(B);
+          P !== void 0 && P && p({ action: O, changedTask: B });
+        } catch (P) {
+          console.error("Error on Delete. " + P);
         }
-    } else if (W === "mouseenter")
+    } else if (O === "mouseenter")
       n.action || p({
-        action: W,
-        changedTask: I,
-        originalSelectedTask: I
+        action: O,
+        changedTask: B,
+        originalSelectedTask: B
       });
-    else if (W === "mouseleave")
+    else if (O === "mouseleave")
       n.action === "mouseenter" && p({ action: "" });
-    else if (W === "dblclick")
-      E && E(I);
-    else if (W === "move") {
-      if (!(s != null && s.current) || !O)
+    else if (O === "dblclick")
+      j && j(B);
+    else if (O === "move") {
+      if (!(s != null && s.current) || !I)
         return;
-      O.x = J.clientX;
-      const N = O.matrixTransform(
-        (M = s.current.getScreenCTM()) == null ? void 0 : M.inverse()
+      I.x = z.clientX;
+      const P = I.matrixTransform(
+        (N = s.current.getScreenCTM()) == null ? void 0 : N.inverse()
       );
-      m(N.x - I.x1), p({
-        action: W,
-        changedTask: I,
-        originalSelectedTask: I
+      _(P.x - B.x1), p({
+        action: O,
+        changedTask: B,
+        originalSelectedTask: B
       });
     } else
       p({
-        action: W,
-        changedTask: I,
-        originalSelectedTask: I
+        action: O,
+        changedTask: B,
+        originalSelectedTask: B
       });
   };
-  return z(() => {
-    const W = r[1].getTime() - r[0].getTime() - r[1].getTimezoneOffset() * 60 * 1e3 + r[0].getTimezoneOffset() * 60 * 1e3, I = u * c / W;
-    h(I);
-  }, [c, r, u]), z(() => {
-    const W = async (J) => {
+  return X(() => {
+    const O = r[1].getTime() - r[0].getTime() - r[1].getTimezoneOffset() * 60 * 1e3 + r[0].getTimezoneOffset() * 60 * 1e3, B = g * c / O;
+    u(B);
+  }, [c, r, g]), X(() => {
+    const O = async (z) => {
       var ce;
-      if (!n.changedTask || !O || !(s != null && s.current))
+      if (!n.changedTask || !I || !(s != null && s.current))
         return;
-      J.preventDefault(), O.x = J.clientX;
-      const M = O.matrixTransform(
+      z.preventDefault(), I.x = z.clientX;
+      const N = I.matrixTransform(
         (ce = s == null ? void 0 : s.current.getScreenCTM()) == null ? void 0 : ce.inverse()
-      ), { isChanged: N, changedTask: q } = He(
-        M.x,
+      ), { isChanged: P, changedTask: Z } = He(
+        N.x,
         n.action,
         n.changedTask,
-        _,
-        u,
-        j,
-        g
+        b,
+        g,
+        T,
+        h
       );
-      N && p({ action: n.action, changedTask: q });
-    }, I = async (J) => {
-      var ie;
-      const { action: M, originalSelectedTask: N, changedTask: q } = n;
-      if (!q || !O || !(s != null && s.current) || !N)
+      P && p({ action: n.action, changedTask: Z });
+    }, B = async (z) => {
+      var G;
+      const { action: N, originalSelectedTask: P, changedTask: Z } = n;
+      if (!Z || !I || !(s != null && s.current) || !P)
         return;
-      J.preventDefault(), O.x = J.clientX;
-      const ce = O.matrixTransform(
-        (ie = s == null ? void 0 : s.current.getScreenCTM()) == null ? void 0 : ie.inverse()
-      ), { changedTask: Z } = He(
+      z.preventDefault(), I.x = z.clientX;
+      const ce = I.matrixTransform(
+        (G = s == null ? void 0 : s.current.getScreenCTM()) == null ? void 0 : G.inverse()
+      ), { changedTask: re } = He(
         ce.x,
-        M,
-        q,
-        _,
-        u,
-        j,
-        g
-      ), de = N.start !== Z.start || N.end !== Z.end || N.progress !== Z.progress;
-      s.current.removeEventListener("mousemove", W), s.current.removeEventListener("mouseup", I), p({ action: "" }), H(!1);
-      let $ = !0;
-      if ((M === "move" || M === "end" || M === "start") && T && de)
+        N,
+        Z,
+        b,
+        g,
+        T,
+        h
+      ), ge = P.start !== re.start || P.end !== re.end || P.progress !== re.progress;
+      s.current.removeEventListener("mousemove", O), s.current.removeEventListener("mouseup", B), p({ action: "" }), W(!1);
+      let se = !0;
+      if ((N === "move" || N === "end" || N === "start") && m && ge)
         try {
-          const G = await T(
-            Z,
-            Z.barChildren
+          const K = await m(
+            re,
+            re.barChildren
           );
-          G !== void 0 && ($ = G);
+          K !== void 0 && (se = K);
         } catch {
-          $ = !1;
+          se = !1;
         }
-      else if (y && de)
+      else if (v && ge)
         try {
-          const G = await y(
-            Z,
-            Z.barChildren
+          const K = await v(
+            re,
+            re.barChildren
           );
-          G !== void 0 && ($ = G);
+          K !== void 0 && (se = K);
         } catch {
-          $ = !1;
+          se = !1;
         }
-      $ || v(N);
+      se || y(P);
     };
-    !S && (n.action === "move" || n.action === "end" || n.action === "start" || n.action === "progress") && (s != null && s.current) && (s.current.addEventListener("mousemove", W), s.current.addEventListener("mouseup", I), H(!0));
+    !w && (n.action === "move" || n.action === "end" || n.action === "start" || n.action === "progress") && (s != null && s.current) && (s.current.addEventListener("mousemove", O), s.current.addEventListener("mouseup", B), W(!0));
   }, [
     n,
-    _,
-    j,
-    y,
-    u,
+    b,
     T,
+    v,
+    g,
+    m,
     s,
-    S
-  ]), /* @__PURE__ */ l.jsx("g", { className: "content", children: /* @__PURE__ */ l.jsx("g", { className: "bar", children: e.map((W) => /* @__PURE__ */ l.jsx(
-    Xt,
+    w
+  ]), /* @__PURE__ */ l.jsx("g", { className: "content", children: /* @__PURE__ */ l.jsx("g", { className: "bar", children: e.map((O) => /* @__PURE__ */ l.jsx(
+    $t,
     {
-      task: W,
+      task: O,
       taskHeight: f,
-      isDateChangeable: !!T && !W.isDisabled,
-      isDelete: !W.isDisabled,
-      onEventStart: ge,
-      isSelected: !!a && W.id === a.id,
-      rtl: g
+      isDateChangeable: !!m && !O.isDisabled,
+      isDelete: !O.isDisabled,
+      onEventStart: q,
+      isSelected: !!o && O.id === o.id,
+      rtl: h
     },
-    W.id
+    O.id
   )) }) });
-}, Rr = (o) => {
+}, wr = (a) => {
   const {
     gridProps: e,
     calendarProps: r,
     barProps: n,
-    ganttHeight: a,
+    ganttHeight: o,
     scrollY: c,
-    scrollX: u
-  } = o, s = le(null), f = le(null), g = le(null);
-  z(() => {
+    scrollX: g
+  } = a, s = le(null), f = le(null), h = le(null);
+  X(() => {
     f.current && (f.current.scrollTop = c);
-  }, [c]), z(() => {
-    g.current && (g.current.scrollLeft = u);
-  }, [u]);
+  }, [c]), X(() => {
+    h.current && (h.current.scrollLeft = g);
+  }, [g]);
   const p = { ...n, svg: s };
   return (
     // ROOT
-    /* @__PURE__ */ l.jsxs("div", { className: "roadmap__task-root", ref: g, dir: "ltr", children: [
+    /* @__PURE__ */ l.jsxs("div", { className: "roadmap__task-root", ref: h, dir: "ltr", children: [
       /* @__PURE__ */ l.jsx(
         "svg",
         {
@@ -2058,7 +2027,7 @@ const br = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
           ref: f,
           className: "roadmap__task-content",
           style: {
-            height: a || void 0,
+            height: o || void 0,
             width: e.svgWidth
           },
           children: /* @__PURE__ */ l.jsxs(
@@ -2070,7 +2039,7 @@ const br = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
               xmlns: "http://www.w3.org/2000/svg",
               children: [
                 /* @__PURE__ */ l.jsx(Ht, { ...e }),
-                /* @__PURE__ */ l.jsx(wr, { ...p })
+                /* @__PURE__ */ l.jsx(jr, { ...p })
               ]
             }
           )
@@ -2078,7 +2047,7 @@ const br = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
       )
     ] })
   );
-}, Pr = {
+}, Cr = {
   // general
   bodyStyle: {
     display: "flex",
@@ -2116,233 +2085,236 @@ const br = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   barCornerRadius: 3,
   handleWidth: 8,
   todayColor: "rgba(252, 248, 227, 0.5)",
+  columns: [{ id: "name", name: "Name", width: 180 }],
   TooltipContent: Pt
-}, Mr = (o) => {
+}, Or = (a) => {
   const {
     // general
     tasks: e,
-    bodyStyle: r,
+    columns: r,
+    bodyStyle: n,
     // event options
-    timeStep: n,
-    onDateChange: a,
-    onProgressChange: c,
-    onDoubleClick: u,
-    onDelete: s,
-    onSelect: f,
-    onExpanderClick: g,
+    timeStep: o,
+    onDateChange: c,
+    onProgressChange: g,
+    onDoubleClick: s,
+    onDelete: f,
+    onSelect: h,
+    onExpanderClick: p,
     // display options
-    viewMode: p,
-    locale: v,
-    rtl: b,
+    viewMode: y,
+    locale: R,
+    rtl: m,
     // styling options
-    headerHeight: T,
-    columnWidth: y,
-    listCellWidth: E,
-    rowHeight: w,
-    ganttHeight: _,
-    barFill: h,
-    barCornerRadius: j,
-    handleWidth: m,
-    todayColor: S,
-    TooltipContent: H
-  } = o, [O, ge] = V(e), [ae, W] = V(() => {
-    const [R, F] = Xe(O, p);
-    return { viewMode: p, dates: Be(R, F, p) };
-  }), [I, J] = V(w * h / 100), [M, N] = V(0), [q, ce] = V(0), [Z, de] = V(_), [$, ie] = V([]), [G, Ee] = V({
+    headerHeight: v,
+    columnWidth: j,
+    listCellWidth: C,
+    rowHeight: b,
+    ganttHeight: u,
+    barFill: T,
+    barCornerRadius: _,
+    handleWidth: w,
+    todayColor: W,
+    TooltipContent: I
+  } = a, [q, he] = V(e), [O, B] = V(() => {
+    const [S, M] = $e(q, y);
+    return { viewMode: y, dates: Ve(S, M, y) };
+  }), [z, N] = V(b * T / 100), [P, Z] = V(0), [ce, re] = V(0), [ge, se] = V(u), [G, K] = V([]), [ue, Se] = V({
     action: ""
-  }), [me, $e] = V(), [xe, ve] = V(null), [ee, pe] = V(0), [te, fe] = V(-1), [We, be] = V(!1), oe = le(null), Te = le(null), se = ae.dates.length * y, ue = $.length * w;
-  z(() => ge(e), [e]), z(() => {
-    const R = g ? ut(O) : O, [F, L] = Xe(R, p);
-    let X = Be(F, L, p);
-    b && (X = X.reverse(), te === -1 && fe(X.length * y)), W({ dates: X, viewMode: p }), ie(
+  }), [ke, Ye] = V(), [fe, me] = V(null), [ee, ve] = V(0), [te, Re] = V(-1), [De, Ee] = V(!1), ie = le(null), de = le(null), ne = O.dates.length * j, xe = G.length * b;
+  X(() => he(e), [e]), X(() => {
+    const S = p ? ut(q) : q, [M, H] = $e(S, y);
+    let F = Ve(M, H, y);
+    m && (F = F.reverse(), te === -1 && Re(F.length * j)), B({ dates: F, viewMode: y }), K(
       nt({
-        tasks: R,
-        dates: X,
-        columnWidth: y,
-        rowHeight: w,
-        taskHeight: I,
-        barCornerRadius: j,
-        handleWidth: m,
-        rtl: b
+        tasks: S,
+        dates: F,
+        columnWidth: j,
+        rowHeight: b,
+        taskHeight: z,
+        barCornerRadius: _,
+        handleWidth: w,
+        rtl: m
       })
     );
   }, [
-    O,
-    p,
-    w,
-    j,
+    q,
     y,
-    I,
-    m,
     b,
+    _,
+    j,
+    z,
+    w,
+    m,
     te,
-    g
-  ]), z(() => {
-    const { changedTask: R, action: F } = G;
-    if (R) {
-      if (F === "delete")
-        Ee({ action: "" }), ie($.filter((L) => L.id !== R.id));
-      else if (F === "move" || F === "end" || F === "start" || F === "progress") {
-        const L = $.find((X) => X.id === R.id);
-        if (L && (L.start.getTime() !== R.start.getTime() || L.end.getTime() !== R.end.getTime() || L.progress !== R.progress)) {
-          const X = $.map(
-            (Ce) => Ce.id === R.id ? R : Ce
+    p
+  ]), X(() => {
+    const { changedTask: S, action: M } = ue;
+    if (S) {
+      if (M === "delete")
+        Se({ action: "" }), K(G.filter((H) => H.id !== S.id));
+      else if (M === "move" || M === "end" || M === "start" || M === "progress") {
+        const H = G.find((F) => F.id === S.id);
+        if (H && (H.start.getTime() !== S.start.getTime() || H.end.getTime() !== S.end.getTime())) {
+          const F = G.map(
+            (Oe) => Oe.id === S.id ? S : Oe
           );
-          ie(X);
+          K(F);
         }
       }
     }
-  }, [G, $]), z(() => {
-    oe.current && ce(oe.current.offsetWidth - M);
-  }, [oe, M]), z(() => {
-    const R = (F) => {
-      if (F.shiftKey || F.deltaX) {
-        const L = F.deltaX ? F.deltaX : F.deltaY;
-        let X = te + L;
-        X < 0 ? X = 0 : X > se && (X = se), fe(X), F.preventDefault();
-      } else if (_) {
-        let L = ee + F.deltaY;
-        L < 0 ? L = 0 : L > ue - _ && (L = ue - _), L !== ee && (pe(L), F.preventDefault());
+  }, [ue, G]), X(() => {
+    ie.current && re(ie.current.offsetWidth - P);
+  }, [ie, P]), X(() => {
+    const S = (M) => {
+      if (M.shiftKey || M.deltaX) {
+        const H = M.deltaX ? M.deltaX : M.deltaY;
+        let F = te + H;
+        F < 0 ? F = 0 : F > ne && (F = ne), Re(F), M.preventDefault();
+      } else if (u) {
+        let H = ee + M.deltaY;
+        H < 0 ? H = 0 : H > xe - u && (H = xe - u), H !== ee && (ve(H), M.preventDefault());
       }
-      be(!0);
+      Ee(!0);
     };
-    return oe.current && oe.current.addEventListener("wheel", R, {
+    return ie.current && ie.current.addEventListener("wheel", S, {
       passive: !1
     }), () => {
-      oe.current && oe.current.removeEventListener("wheel", R);
+      ie.current && ie.current.removeEventListener("wheel", S);
     };
-  }, [oe.current, ee, te, _, se, b]), z(() => {
-    xe && (ie(
-      $.map((R) => R.id !== xe.id ? R : xe)
-    ), ve(null));
-  }, [xe, $]), z(() => {
-    const R = w * h / 100;
-    R !== I && J(R);
-  }, [w, h, I]), z(() => {
-    E || N(0), Te.current && N(Te.current.offsetWidth);
-  }, [Te, E]), z(() => {
-    de(_ ? _ + T : O.length * w + T);
-  }, [_, T, w, O]);
-  const Ne = (R) => {
-    ee !== R.currentTarget.scrollTop && !We && pe(R.currentTarget.scrollTop), be(!1);
-  }, Fe = (R) => {
-    te !== R.currentTarget.scrollLeft && !We && fe(R.currentTarget.scrollLeft), be(!1);
-  }, _e = (R) => {
-    const F = $.find((X) => X.id === R), L = $.find(
-      (X) => !!me && X.id === me.id
+  }, [ie.current, ee, te, u, ne, m]), X(() => {
+    fe && (K(
+      G.map((S) => S.id !== fe.id ? S : fe)
+    ), me(null));
+  }, [fe, G]), X(() => {
+    const S = b * T / 100;
+    S !== z && N(S);
+  }, [b, T, z]), X(() => {
+    C || Z(0), de.current && Z(de.current.offsetWidth);
+  }, [de, C]), X(() => {
+    se(u ? u + v : q.length * b + v);
+  }, [u, v, b, q]);
+  const Fe = (S) => {
+    ee !== S.currentTarget.scrollTop && !De && ve(S.currentTarget.scrollTop), Ee(!1);
+  }, be = (S) => {
+    te !== S.currentTarget.scrollLeft && !De && Re(S.currentTarget.scrollLeft), Ee(!1);
+  }, Ae = (S) => {
+    const M = G.find((F) => F.id === S), H = G.find(
+      (F) => !!ke && F.id === ke.id
     );
-    f && (L && f(L, !1), F && f(F, !0)), $e(F);
-  }, Ye = (R) => {
-    g && R.expanded !== void 0 && g({ ...R, expanded: !R.expanded });
-  }, Ae = {
-    columnWidth: y,
-    svgWidth: se,
-    tasks: O,
-    rowHeight: w,
-    dates: ae.dates,
-    todayColor: S,
-    rtl: b
-  }, ke = {
-    dateSetup: ae,
-    locale: v,
-    headerHeight: T,
-    columnWidth: y,
-    rtl: b
+    h && (H && h(H, !1), M && h(M, !0)), Ye(M);
+  }, Xe = (S) => {
+    p && S.expanded !== void 0 && p({ ...S, expanded: !S.expanded });
+  }, Ce = {
+    columnWidth: j,
+    svgWidth: ne,
+    tasks: q,
+    rowHeight: b,
+    dates: O.dates,
+    todayColor: W,
+    rtl: m
   }, ze = {
-    tasks: $,
-    dates: ae.dates,
-    ganttEvent: G,
-    selectedTask: me,
-    rowHeight: w,
-    taskHeight: I,
-    columnWidth: y,
-    timeStep: n,
-    svgWidth: se,
-    rtl: b,
-    setGanttEvent: Ee,
-    setFailedTask: ve,
-    setSelectedTask: _e,
-    onDateChange: a,
-    onProgressChange: c,
-    onDoubleClick: u,
-    onDelete: s
+    dateSetup: O,
+    locale: R,
+    headerHeight: v,
+    columnWidth: j,
+    rtl: m
   }, Ue = {
+    tasks: G,
+    dates: O.dates,
+    ganttEvent: ue,
+    selectedTask: ke,
+    rowHeight: b,
+    taskHeight: z,
+    columnWidth: j,
+    timeStep: o,
+    svgWidth: ne,
+    rtl: m,
+    setGanttEvent: Se,
+    setFailedTask: me,
+    setSelectedTask: Ae,
+    onDateChange: c,
+    onProgressChange: g,
+    onDoubleClick: s,
+    onDelete: f
+  }, We = {
     scrollY: ee,
     // components
-    TaskListHeader: Vt,
-    TaskListTable: $t,
+    TaskListHeader: Bt,
+    TaskListTable: Yt,
     // components props
     taskListHeaderProps: {
-      columns: ["Name"]
+      columns: r
     },
     taskListTableProps: {
-      tasks: $,
-      onExpanderClick: Ye
+      tasks: G,
+      columns: r,
+      onExpanderClick: Xe
     },
     // styles
     taskListTableWrapperStyles: {
-      height: _
+      height: u
     },
     // refs
-    taskListRef: Te
+    taskListRef: de
   };
   return (
     // ROOT
     /* @__PURE__ */ l.jsxs("div", { children: [
-      /* @__PURE__ */ l.jsxs("div", { className: "roadmap", style: r, tabIndex: 0, ref: oe, children: [
-        E && /* @__PURE__ */ l.jsx(Bt, { ...Ue }),
+      /* @__PURE__ */ l.jsxs("div", { className: "roadmap", style: n, tabIndex: 0, ref: ie, children: [
+        C && /* @__PURE__ */ l.jsx(Vt, { ...We }),
         /* @__PURE__ */ l.jsx(
-          Rr,
+          wr,
           {
-            barProps: ze,
-            gridProps: Ae,
-            calendarProps: ke,
-            ganttHeight: _,
+            barProps: Ue,
+            gridProps: Ce,
+            calendarProps: ze,
+            ganttHeight: u,
             scrollX: te,
             scrollY: ee
           }
         ),
-        G.changedTask && /* @__PURE__ */ l.jsx(
+        ue.changedTask && /* @__PURE__ */ l.jsx(
           Ot,
           {
-            rowHeight: w,
-            svgContainerHeight: Z,
-            svgContainerWidth: q,
+            rowHeight: b,
+            svgContainerHeight: ge,
+            svgContainerWidth: ce,
             scrollX: te,
             scrollY: ee,
-            task: G.changedTask,
-            headerHeight: T,
-            taskListWidth: M,
-            rtl: b,
-            children: /* @__PURE__ */ l.jsx(H, { task: G.changedTask })
+            task: ue.changedTask,
+            headerHeight: v,
+            taskListWidth: P,
+            rtl: m,
+            children: /* @__PURE__ */ l.jsx(I, { task: ue.changedTask })
           }
         ),
         /* @__PURE__ */ l.jsx(
           Mt,
           {
             scroll: ee,
-            onScroll: Ne,
+            onScroll: Fe,
             rootStyle: {
-              height: _,
-              marginTop: T,
-              marginLeft: b ? "" : "-17px"
+              height: u,
+              marginTop: v,
+              marginLeft: m ? "" : "-17px"
             },
             bodyStyle: {
-              height: ue
+              height: xe
             }
           }
         )
       ] }),
       /* @__PURE__ */ l.jsx(
-        jt,
+        _t,
         {
           scroll: te,
-          onScroll: Fe,
+          onScroll: be,
           rootStyle: {
-            margin: b ? `0px ${M}px 0px 0px` : `0px 0px 0px ${M}px`
+            margin: m ? `0px ${P}px 0px 0px` : `0px 0px 0px ${P}px`
           },
           bodyStyle: {
-            width: se
+            width: ne
           }
         }
       )
@@ -2353,56 +2325,56 @@ export {
   Lt as Bar,
   tt as BarDateHandle,
   dt as BarDisplay,
-  Ft as BarOriginal,
-  Wt as BarSmall,
+  Wt as BarOriginal,
+  Nt as BarSmall,
   It as Calendar,
-  Me as CalendarHeader,
+  Le as CalendarHeader,
   Ht as Grid,
-  jt as HorizontalScroll,
-  Nt as Project,
-  Mr as RoadMap,
-  Xt as TaskItem,
-  Bt as TaskList,
-  Vt as TaskListHeader,
-  $t as TaskListTable,
+  _t as HorizontalScroll,
+  Ft as Project,
+  Or as RoadMap,
+  $t as TaskItem,
+  Vt as TaskList,
+  Bt as TaskListHeader,
+  Yt as TaskListTable,
   Ot as Tooltip,
   Pt as TooltipContent,
   Mt as VerticalScroll,
   A as ViewMode,
   U as addToDate,
-  pr as barHelper,
-  Tr as barTask,
-  br as classNameHelper,
-  De as cn,
-  kr as components,
-  Cr as containers,
-  st as convertToBar,
-  ot as convertToBarTask,
+  hr as barHelper,
+  xr as barTask,
+  vr as classNameHelper,
+  ye as cn,
+  Rr as components,
+  Dr as containers,
+  ot as convertToBar,
+  at as convertToBarTask,
   nt as convertToBarTasks,
-  at as convertToProject,
-  _r as custom,
-  xr as dateHelper,
-  jr as dateSetup,
-  Pr as defaultRoadMapProps,
-  Xe as ganttDateRange,
-  Sr as ganttTaskActions,
-  Ve as getCachedDateTimeFormat,
+  st as convertToProject,
+  br as custom,
+  yr as dateHelper,
+  Tr as dateSetup,
+  Cr as defaultRoadMapProps,
+  $e as ganttDateRange,
+  _r as ganttTaskActions,
+  Be as getCachedDateTimeFormat,
   lt as getDaysInMonth,
-  Re as getLocaleMonth,
-  Dt as getProgressPoint,
+  we as getLocaleMonth,
+  Rt as getProgressPoint,
   it as getWeekNumberISO8601,
   He as handleTaskBySVGMouseEvent,
-  Er as helpers,
-  kt as isBarTask,
+  kr as helpers,
+  Et as isBarTask,
   ct as isKeyboardEvent,
-  Et as isMouseEvent,
-  vr as otherHelper,
-  Rt as progressByProgressWidth,
-  he as progressWithByParams,
-  yr as publicTypes,
+  Dt as isMouseEvent,
+  mr as otherHelper,
+  kt as progressByProgressWidth,
+  St as progressWithByParams,
+  gr as publicTypes,
   ut as removeHiddenTasks,
-  Be as seedDates,
-  ne as startOfDate,
-  Or as types
+  Ve as seedDates,
+  oe as startOfDate,
+  Er as types
 };
 //# sourceMappingURL=index.es.js.map

@@ -8,7 +8,6 @@ import {
 } from './components/TaskListHeader';
 
 import './TaskList.scss';
-import { Column } from '../../types';
 
 // *** TYPES ***
 export type TaskListProps = {

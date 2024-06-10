@@ -24,7 +24,7 @@ export declare const convertToBarTasks: (args: IConvertToBarTasksArgs, conversio
 export declare const convertToBarTask: (args: IConvertToBarTaskArgs, projectIndex: number) => BarTask;
 export declare const convertToBar: (args: IConvertToBarTaskArgs) => BarTask;
 export declare const convertToProject: (args: IConvertToBarTaskArgs) => BarTask;
-export declare const progressWithByParams: (taskX1: number, taskX2: number, progress: number, rtl: boolean) => number[];
+export declare const progressWithByParams: (taskX1: number, taskX2: number, rtl: boolean) => number[];
 export declare const progressByProgressWidth: (progressWidth: number, barTask: BarTask) => number;
 export declare const getProgressPoint: (progressX: number, taskY: number, taskHeight: number) => string;
 /**

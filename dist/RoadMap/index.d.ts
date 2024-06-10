@@ -1,9 +1,10 @@
 import { default as React } from 'react';
-import { Task, EventOption, DisplayOption, StylingOption } from '../types/public-types';
+import { Task, EventOption, DisplayOption, StylingOption, Column } from '../types/public-types';
 import { OptionalKeys } from '../types/custom';
 
 export type RoadMapProps = Partial<EventOption> & Partial<DisplayOption> & Partial<StylingOption> & {
     tasks: Task[];
+    columns?: Column[];
     bodyStyle?: React.CSSProperties;
 };
 type TOptionalPropsKeys = Exclude<OptionalKeys<RoadMapProps>, undefined>;

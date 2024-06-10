@@ -1,5 +1,19 @@
 import { Task, TaskType } from './public-types';
 
+// type PickTask = Pick<
+//   Task,
+//   | 'line'
+//   | 'id'
+//   | 'type'
+//   | 'name'
+//   | 'start'
+//   | 'end'
+//   | 'styles'
+//   | 'isDisabled'
+//   | 'project'
+//   | 'expanded'
+// >;
+
 export interface BarTask extends Task {
   index: number;
   typeInternal: TaskTypeInternal;
@@ -7,8 +21,6 @@ export interface BarTask extends Task {
   x2: number;
   y: number;
   height: number;
-  progressX: number;
-  progressWidth: number;
   barCornerRadius: number;
   handleWidth: number;
   barChildren: BarTask[];

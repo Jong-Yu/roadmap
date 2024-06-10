@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { BarTask } from './bar-task';
 
 export enum ViewMode {
   QuarterDay = 'Quarter Day',
@@ -14,7 +15,14 @@ export type styles = {
   backgroundColor?: string;
 };
 export interface Task {
-  [key: string]: string | number | Date | boolean | undefined | styles;
+  [key: string]:
+    | string
+    | number
+    | Date
+    | boolean
+    | undefined
+    | styles
+    | BarTask[];
   /**
    * By default all tasks shown by list index sequentially
    * So if you are going to use some other order or output multiple bars per row

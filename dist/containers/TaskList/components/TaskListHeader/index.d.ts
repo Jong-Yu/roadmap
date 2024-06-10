@@ -1,7 +1,8 @@
 import { default as React } from 'react';
+import { Column } from '../../../../types';
 
 export interface TaskListHeaderProps {
-    columns?: (JSX.Element | string)[];
+    columns: Column[];
     rootStyle?: React.CSSProperties;
     headerStyle?: React.CSSProperties;
     columnStyle?: React.CSSProperties;
