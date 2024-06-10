@@ -1,0 +1,30 @@
+@import '../../../../default.scss';
+
+.tasklist__header-root {
+    display: table;
+    border-Bottom: #e6e4e4 1px solid;
+    border-Top: #e6e4e4 1px solid;
+    border-Left: #e6e4e4 1px solid;
+    font-size: $FONT_SIZE;
+}
+
+.tasklist__header-header {
+    display: table-row;
+    list-Style: none;
+    height: calc($HEADER_HEIGHT - 2px);
+}
+
+.tasklist__header-column {
+    display: table-cell;
+    vertical-Align: middle;
+    min-width: $ROW_WIDTH;
+    text-align: center;
+}
+
+.tasklist__header-comumn__sep {
+    border-Right: 1px solid rgb(196, 196, 196);
+    opacity: 1;
+    margin-Left: -2px;
+    height: $HEADER_HEIGHT * 0.5;
+    margin-top: $HEADER_HEIGHT * 0.2;
+}

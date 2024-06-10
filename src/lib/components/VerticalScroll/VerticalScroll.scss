@@ -1,0 +1,11 @@
+.roadmap {
+  @at-root .vertical-scroll-root {
+    overflow: hidden auto;
+    width: 17px;
+    flex-shrink: 0;
+  }
+
+  @at-root .vertical-scroll-body {
+    width: 1px;
+  }
+}

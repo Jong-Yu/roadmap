@@ -1,0 +1,10 @@
+.roadmap {
+  @at-root .horizontal-scroll-root {
+    overflow: auto;
+    max-width: 100%;
+  }
+
+  @at-root .horizontal-scroll-body {
+    height: 1px;
+  }
+}

@@ -1,0 +1,14 @@
+.taskitem-text {
+    fill: #fff;
+    text-Anchor: middle;
+    font-Weight: lighter;
+    user-Select: none;
+    pointer-Events: none;
+}
+
+.taskitem-text__outside {
+    fill: #555;
+    text-Anchor: start;
+    user-Select: none;
+    pointer-Events: none;
+}

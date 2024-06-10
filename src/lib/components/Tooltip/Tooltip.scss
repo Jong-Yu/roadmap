@@ -1,0 +1,17 @@
+.roadmap {
+  @at-root .tooltip-wrap {
+    position: absolute;
+    display: flex;
+    flex-shrink: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}

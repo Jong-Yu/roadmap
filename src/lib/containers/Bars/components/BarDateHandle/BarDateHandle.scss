@@ -1,0 +1,14 @@
+.bar-date-handle {
+  fill: #ddd;
+  cursor: ew-resize;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.bar.hovered {
+  .bar-date-handle {
+    fill: #aaa;
+    opacity: 1;
+    visibility: visible;
+  }
+}
